@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+
+.h{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navgation{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.dropdowns{
+    display: flex;
+    
+}
+
+.Login{
+    padding: 12px 20px;
+    border-radius: 20px;
+    background: #00e48c;
+    
+}
+
+.Login a{
+    color: #fff;
+    text-decoration: none;
+}
