@@ -5,13 +5,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid red;
+   
+}
+
+body{
+    background: linear-gradient(#00e48c, #00e48c);
 }
 
 .h{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    background: transparent;
 }
 
 .navgation{
@@ -20,19 +25,52 @@
     padding: 16px;
 }
 
-.dropdowns{
+.dropdown{
     display: flex;
+    margin-left: 16px;
     
 }
 
 .Login{
     padding: 12px 20px;
     border-radius: 20px;
-    background: #00e48c;
+    background: #006b42;
     
 }
 
 .Login a{
     color: #fff;
     text-decoration: none;
+}
+
+.main-content{
+    display: flex;
+    justify-content: space-around;
+    margin: 200px;
+}
+
+.main-content img{
+    width: 600px;
+    margin-right: 100px;
+}
+
+
+.About-us{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 80px;
+}
+.About-us h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background: rgba(0,0,0,0.2);
 }
