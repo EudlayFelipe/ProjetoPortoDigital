@@ -9,14 +9,34 @@
 }
 
 body{
-    background: linear-gradient(#00e48c, #00e48c);
+    background: linear-gradient(#00e48c,#00e48c)
 }
 
 .h{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    width: 100%;
+    padding: 40px 4px;
+    top: 0;
+    left: 0;
     background: transparent;
+    position: fixed;
+    transition: .2s;
+}
+
+header.rolagem{
+    background-color: #fff;
+    padding: 20px 4px;
+}
+
+header.rolagem .Login{
+    background: #00e48c;
+    color: #fff;
+}
+
+header.rolagem .Login a{
+    color: #fff;
 }
 
 .navgation{
@@ -29,24 +49,32 @@ body{
     display: flex;
     margin-left: 16px;
     
+    
 }
+
+
 
 .Login{
     padding: 12px 20px;
     border-radius: 20px;
-    background: #006b42;
-    
+    background: #fff;
+    color: #00e48c;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;        
 }
 
 .Login a{
-    color: #fff;
+    color: #00e48c;
     text-decoration: none;
+   
 }
 
 .main-content{
     display: flex;
     justify-content: space-around;
-    margin: 200px;
+    margin: 300px 200px;
+    color: #fff;
 }
 
 .main-content img{
