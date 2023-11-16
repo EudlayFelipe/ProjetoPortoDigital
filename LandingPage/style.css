@@ -9,7 +9,15 @@
 }
 
 body{
-    background: linear-gradient(#00e48c,#00e48c)
+    background: linear-gradient(34deg, #00c57a,#0b2fcf);
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+main{
+    min-width: 320px;
+    max-width: 1920px;
+    
 }
 
 .h{
@@ -19,14 +27,15 @@ body{
     width: 100%;
     padding: 40px 4px;
     top: 0;
-    left: 0;
+    left: 0;    
     background: transparent;
+    z-index: 1000;
     position: fixed;
     transition: .2s;
 }
 
 header.rolagem{
-    background-color: #fff;
+    background-color: #f1f1f1;
     padding: 20px 4px;
 }
 
@@ -48,11 +57,8 @@ header.rolagem .Login a{
 .dropdown{
     display: flex;
     margin-left: 16px;
-    
-    
+        
 }
-
-
 
 .Login{
     padding: 12px 20px;
@@ -61,7 +67,8 @@ header.rolagem .Login a{
     color: #00e48c;
     display: flex;
     justify-content: space-around;
-    align-items: center;        
+    align-items: center;  
+    transition: .3s;      
 }
 
 .Login a{
@@ -70,25 +77,54 @@ header.rolagem .Login a{
    
 }
 
+.Login:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
 .main-content{
     display: flex;
     justify-content: space-around;
-    margin: 300px 200px;
+    margin: 300px 100px 100px 100px;
+    
     color: #fff;
 }
 
+.Text{
+    display: flex;
+    flex-direction: column;
+    margin: 100px;
+
+}
+
 .main-content img{
-    width: 600px;
-    margin-right: 100px;
+    width: 400px;
+    margin: 100px;
+    
+    border-radius: 20px;   
+    
+}
+
+.main-subtitle strong{
+    color: #00e48c;
 }
 
 
 .About-us{
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 80px;
+    justify-content: center;   
+    color: #000;
+    background: #fff;
+    
 }
+
+.second-text{
+    padding: 60px;
+    padding-bottom: 90px;
+    
+}
+
 .About-us h1{
     display: flex;
     justify-content: center;
@@ -96,9 +132,35 @@ header.rolagem .Login a{
     margin: 60px;
 }
 
+.About-us img{
+    border-radius: 20px;
+}
+
 footer{
     display: flex;
     justify-content: center;
     padding: 10px;
-    background: rgba(0,0,0,0.2);
+    background: rgb(49, 49, 49);
+    color: #fff;
+}
+
+@media screen and (max-width: 1243px){
+    .navgation, .Login{
+        display: none;
+    }   
+
+    .main-content, .About-us{
+        flex-direction: column;
+    }
+
+    .main-content img{
+        width: 300px;
+    }
+    .About-us img{
+        width: 400px;
+    }
+
+    .Text{
+        width: 100%;
+    }
 }
