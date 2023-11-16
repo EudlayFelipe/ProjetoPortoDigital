@@ -9,4 +9,8 @@
    
 }
 
+/* Para estilizar, só basta colocar um novo nome na class do que vc quer estilizar e chamar ela aqui. Ex: */
 
+.container-content{ /* Essa classe está na linha 19 do código html */
+    background-color: antiquewhite;
+}
