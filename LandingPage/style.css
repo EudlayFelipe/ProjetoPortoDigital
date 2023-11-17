@@ -11,7 +11,7 @@
 body{
     background: url(./assets/BG/BG2.jpg);
     background-repeat: no-repeat;
-   
+    
 }
 
 main{
@@ -154,7 +154,7 @@ header.rolagem .Login a{
 }
 
 .Clientes{
-    border: 1px solid red;
+    
     background: url(./assets/BG/BG2.jpg);
     background-position: 100%;
 }
@@ -179,6 +179,9 @@ footer{
 }
 
 @media screen and (max-width: 1243px){
+    *{
+        
+    }
     .navgation, .Login{
         display: none;
     } 
@@ -188,11 +191,17 @@ footer{
 
     .main-content, .About-us{
         width: 100%;
-        margin: 100px;
-        margin-left: 0;
-        
+        margin: 1px;
+        margin-left: 0;        
         flex-direction: column;
         padding: 24px;
+        
+    }
+
+    .second-text{
+        
+        width: 446px;
+        height: 620px;
     }
 
     .main-content h3{
@@ -208,6 +217,10 @@ footer{
     }
     .About-us{
         height: 1000px;
+        
+    }
+    .About-us p{
+        font-size: 10px;
     }
 
     .Text{
