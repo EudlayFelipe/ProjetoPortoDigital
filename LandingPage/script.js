@@ -1,6 +1,8 @@
+
 window.addEventListener("scroll", function(){
-    let header = this.document.querySelector('.h')
-    header.classList.toggle('rolagem', this.window.scrollY > 0)
+    let header = document.querySelector('.h')
+    header.classList.toggle('rolagem', window.scrollY > 0)
 })
+
 
    
