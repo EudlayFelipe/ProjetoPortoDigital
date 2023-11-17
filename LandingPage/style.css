@@ -9,7 +9,7 @@
 }
 
 body{
-    background: linear-gradient(180deg, #00e48c, #00e48c 50%);
+    background: url(./assets/BG/BG2.jpg);
     background-repeat: no-repeat;
    
 }
@@ -67,7 +67,8 @@ header.rolagem .Login a{
     display: flex;
     justify-content: space-around;
     align-items: center;  
-    transition: .3s;      
+    transition: .3s; 
+    box-shadow: 0px 0px 20px #0085e4;     
 }
 
 .Login a{
@@ -79,6 +80,7 @@ header.rolagem .Login a{
 .Login:hover{
     cursor: pointer;
     transform: scale(1.1);
+    box-shadow: 0 0 50px #02ccff;
 }
 
 
@@ -98,7 +100,8 @@ header.rolagem .Login a{
     display: flex;
     flex-direction: column;
     text-shadow: 2px 2px 2px black;
-    margin-top: 70px;  
+    margin-top: 70px; 
+    margin-bottom: 70px; 
     padding-left: 40px ;  
 }
 
@@ -121,9 +124,9 @@ header.rolagem .Login a{
     text-align: justify;  
     color: #fff;
     text-shadow: 1px 1px 1px black;
-    background: #00e498;
+    background: #00e48c;
     height: 700px;
-   
+    
     
 }
 
@@ -147,9 +150,14 @@ header.rolagem .Login a{
 .About-us p{
     background: rgba(0, 0, 0, .03);
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 5px;   
 }
 
+.Clientes{
+    border: 1px solid red;
+    background: url(./assets/BG/BG2.jpg);
+    background-position: 100%;
+}
 
 .carousel-slide{
    padding: 60px;   
