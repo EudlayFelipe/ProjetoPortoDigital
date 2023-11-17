@@ -5,13 +5,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-   
+     
 }
 
 body{
-    background: linear-gradient(34deg, #00c57a,#0b2fcf);
+    background: linear-gradient(180deg, #00e48c, #00e48c 50%);
     background-repeat: no-repeat;
-    width: 100%;
+   
 }
 
 main{
@@ -54,10 +54,9 @@ header.rolagem .Login a{
     padding: 16px;
 }
 
-.dropdown{
+.btn-group{
     display: flex;
-    margin-left: 16px;
-        
+    margin-left: 200px;        
 }
 
 .Login{
@@ -82,40 +81,49 @@ header.rolagem .Login a{
     transform: scale(1.1);
 }
 
+
+
 .main-content{
     display: flex;
     justify-content: space-around;
     margin: 300px 100px 100px 100px;
-    
+    text-align: justify;
     color: #fff;
+    background: rgba(0, 0, 0, .021);
+    backdrop-filter: blur(1px);
+    border-radius: 5px;
 }
 
 .Text{
     display: flex;
     flex-direction: column;
-    margin: 100px;
-
+    text-shadow: 2px 2px 2px black;
+    margin-top: 70px;  
+    padding-left: 40px ;  
 }
 
 .main-content img{
     width: 400px;
-    margin: 100px;
-    
+    margin: 100px;    
     border-radius: 20px;   
     
 }
 
 .main-subtitle strong{
-    color: #00e48c;
+    color: rgb(72, 253, 0)
 }
 
 
 .About-us{
     display: flex;
     align-items: center;
-    justify-content: center;   
-    color: #000;
-    background: #fff;
+    justify-content: center; 
+    text-align: justify;  
+    color: #fff;
+    text-shadow: 1px 1px 1px black;
+    background: #00e498;
+    height: 700px;
+   
     
 }
 
@@ -136,6 +144,24 @@ header.rolagem .Login a{
     border-radius: 20px;
 }
 
+.About-us p{
+    background: rgba(0, 0, 0, .03);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+
+.carousel-slide{
+   padding: 60px;   
+}
+.Carrosel{
+    margin: 300px;    
+}
+.carousel-item img{
+    border-radius: 10px;
+}
+
+
 footer{
     display: flex;
     justify-content: center;
@@ -147,10 +173,22 @@ footer{
 @media screen and (max-width: 1243px){
     .navgation, .Login{
         display: none;
-    }   
+    } 
+    .h{
+        width: 100%;
+    }
 
     .main-content, .About-us{
+        width: 100%;
+        margin: 100px;
+        margin-left: 0;
+        
         flex-direction: column;
+        padding: 24px;
+    }
+
+    .main-content h3{
+        font-size: 20px;
     }
 
     .main-content img{
@@ -158,9 +196,19 @@ footer{
     }
     .About-us img{
         width: 400px;
+              
+    }
+    .About-us{
+        height: 1000px;
     }
 
     .Text{
+        width: 100%;
+    }
+
+    .Carrosel{
+        margin: 0;
+        padding: 50px;
         width: 100%;
     }
 }
