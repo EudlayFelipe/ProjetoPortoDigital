@@ -148,13 +148,13 @@ header.rolagem .Login a{
 }
 
 .About-us p{
-    background: rgba(0, 0, 0, .03);
+    background: rgba(0, 0, 0, .3);
     padding: 20px;
     border-radius: 5px;   
 }
 
 .Clientes{
-    
+    border: 1px solid white;
     background: url(./assets/BG/BG2.jpg);
     background-position: 100%;
 }
@@ -172,7 +172,8 @@ header.rolagem .Login a{
 
 footer{
     display: flex;
-    justify-content: center;
+    justify-content: center;  
+    align-items: center;  
     padding: 10px;
     background: rgb(49, 49, 49);
     color: #fff;
@@ -190,12 +191,30 @@ footer{
     }
 
     .main-content, .About-us{
+        display: flex;
         width: 100%;
         margin: 1px;
-        margin-left: 0;        
+        justify-content: center;
+        align-items: center;        
         flex-direction: column;
         padding: 24px;
         
+    }
+    .main-content{
+        background: rgba(0, 0, 0, .3);
+    }
+
+    .Text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0;
+        margin-top: 120px;        
+    }
+    .main-content h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .second-text{
