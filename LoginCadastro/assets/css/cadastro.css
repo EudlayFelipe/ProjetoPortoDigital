@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
-
+  font-family: 'Poppins', sans-serif;
 }
 
 label{
@@ -12,11 +12,11 @@ label{
 }
 
 body {
-  background-image: url("../images/bg-signin.jpg");
+  background-image: url("../images/bg-signup.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background: #f8fafb;
+  
 }
 
 .container {
@@ -30,7 +30,8 @@ body {
   background-color: white;
   padding: 30px;
   border-radius: 4%;
-  box-shadow: 3px 3px 1px 0px #00000060
+  box-shadow: 3px 3px 1px 0px #00000060;
+  width: 400px;
 }
 
 h1{
@@ -44,7 +45,7 @@ h1{
   padding: 5px 5px;
   display: inline-block;
   border: 0;
-  border-bottom: 2px solid gray;;
+  border-bottom: 2px solid gray;
   background-color: transparent;
   outline: none;
   min-width: 180px;
@@ -62,7 +63,7 @@ h1{
 }
 
 .label-float input:focus{
-  border-bottom: 2px solid gray;
+  color: gray;
 }
 
 .label-float label{
@@ -86,13 +87,11 @@ button{
   background-color: #00e48c;
   border-style: none;
   color: rgb(255, 255, 255);
-  padding: 10px;
-  padding-left: 90px;
-  padding-right: 90px;
+  padding: 7px;
   font-weight: bold;
   font-size: 12pt;
   margin-top: 20px;
-  border-radius: 20px;
+  border-radius: 4px;
   cursor: pointer;
   outline: none;
   transition: all .4s ease-out;
@@ -108,40 +107,25 @@ button:hover{
   justify-content: center;
 }
 
-hr{
-  margin-top: 10%;
-  margin-bottom: 10%;
-  width: 60%;
-}
-
-p{
-  color: grey;
-  font-size: 14pt;
-  text-align: center;
-}
-
-a{
-  color: #00e48c;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all .3s ease-out;
-}
-
-a:hover{
-  color: rgb(0, 0, 0);
-}
-
 .fa-eye{
   position: absolute;
   top: 15px;
   right: 10px;
   cursor: pointer;
-  color: black;
+  color: #000000;
 }
 
- #msgError{
+#msgError{
   text-align: center;
-  color: rgb(255, 0, 0);
+  color: #ff0000;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+}
+
+#msgSuccess{
+  text-align: center;
+  color: rgb(5, 239, 149);
   padding: 10px;
   border-radius: 4px;
   display: none;
