@@ -1,16 +1,12 @@
 /* Importando minha fonte */
 @import url('https://fonts.googleapis.com/css2 family=Poppins:wght@700&display=swap');
 
-*{
+* {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-   
+
 }
 
 /* Para estilizar, só basta colocar um novo nome na class do que vc quer estilizar e chamar ela aqui. Ex: */
-
-.container-content{ /* Essa classe está na linha 19 do código html */
-    background-color: antiquewhite;
-}

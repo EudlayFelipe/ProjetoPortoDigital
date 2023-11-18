@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!-- Style -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Login #9</title>
+</head>
+
+<style>
+  .btn-primary {
+    background-color: #24b24b;
+    border-color: #24b24b;
+  }
+
+
+  .control input:checked~.control__indicator {
+    background: #24b24b;
+  }
+</style>
+
+<body>
+
+
+
+  <div class="content">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 contents">
+          <div class="row justify-content-center">
+            <div class="col-md-12">
+              <div class="text-center mb-4">
+                <a href="." class="navbar-brand navbar-brand-autodark"><img src="images/logo-serveloja.svg" height="36"
+                    alt=""></a>
+              </div>
+              <div class="form-block">
+                <div class="mb-4">
+                  <h3>Entrar em <strong style="color: #24b24b;">Serveloja</strong></h3>
+                </div>
+                <form action="#" method="post">
+                  <div class="form-group first">
+                    <label for="username">Usuário</label>
+                    <input type="text" class="form-control" id="user">
+                  </div>
+                  <div class="form-group last mb-4">
+                    <label for="password">Senha</label>
+                    <input type="password" class="form-control" id="password">
+                  </div>
+                  <div class="mb-4" id="error_div" style="display: none;">
+                    <span class="font-weight-bold" id="error_message"></span>
+                  </div>
+                  <div class="d-flex mb-5 align-items-center">
+                    <label class="control control--checkbox mb-0"><span class="caption">Lembrar de mim</span>
+                      <input type="checkbox" checked="checked" />
+                      <div class="control__indicator"></div>
+                    </label>
+                    <span class="ml-auto"><a href="#" class="forgot-pass">Esqueci a senha.</a></span>
+                  </div>
+
+                  <input type="submit" id="submitForm" value="Entrar"
+                    class="btn btn-pill text-white btn-block btn-primary">
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    $(document).ready(function () {
+
+
+
+      $('#submitForm').on('click', function (e) {
+        e.preventDefault();
+        $("#error_div").hide();
+        $("#error_message").removeClass("text-danger");
+        $("#error_message").removeClass("text-success");
+        user = $("#user").val();
+        password = $("#password").val();
+
+        users = {
+          "admin": "admin12345",
+          "jose_silva": "teste123"
+        }
+
+        if (user in users) {
+          var json_password = users[user];
+          if (password == json_password) {
+            $("#error_div").show();
+            $("#error_message").text("Login feito com sucesso!");
+            $("#error_message").addClass("text-success");
+
+          } else {
+            $("#error_div").show();
+            $("#error_message").text("Senha Incorreta!");
+            $("#error_message").addClass("text-danger");
+          }
+        } else {
+          $("#error_div").show();
+          $("#error_message").text("Usuário não existe!");
+          $("#error_message").addClass("text-danger");
+        }
+
+        // para o BACKEND
+
+        // formData = {
+        //     user: "user",
+        //     password: "password",
+        // };
+        // $.ajax({
+        //     type: "POST",
+        //     url: "./____",
+        //     data: formData,
+        //     dataType: "json",
+        //     encode: true,
+        //     success: function(data) {
+        //         console.log(data);
+        //         response = data;
+        //     },
+        //     error: function(xhr, status, error) {
+        //         console.log("Erro na requisição: " + error);
+        //     }
+        // });
+
+
+      });
+
+
+    });
+  </script>
+
+
+</body>
+
+</html>
