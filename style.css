@@ -1,7 +1,49 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
 * {
-    font-family: Cabin;
-    font-weight: Cabin;
+    font-family: 'Roboto', sans-serif;
 }
 
 html {
@@ -9,8 +51,8 @@ html {
   }  
 
 body {
-    background: linear-gradient(320deg, #27174A, #161832, #101728);
     background-attachment: fixed;
+    background: linear-gradient(320deg, #27174A, #161832, #101728);
 }
 
 .principal {
@@ -21,8 +63,18 @@ body {
     text-shadow: 2px 2px 4px #7529D6;
     max-width: 100%;
     max-height: 100%;
-    
 }
+
+.home {
+    height: 100vh;
+}
+
+.teste {
+    padding-top: 10px;
+    background: linear-gradient(16px, #27174A, #161832, #101728);
+    height: 100vh;
+}
+
 .foto{
     padding: 0;
     height: 500px;
@@ -40,6 +92,7 @@ body {
     background: linear-gradient(to right, rgb(65,37,131), rgb(38,14,105));
     overflow-x: hidden;
     transition: 0.5s;
+    border-radius: 10px;
   }
   
 .menu a {
@@ -100,12 +153,6 @@ a {
     font-size: 30px;
 }
 
-div.container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-}
-
 .gradiente-botão {
     background: linear-gradient(to left, rgb(65,37,131), rgb(38,14,105));
     color: white;
@@ -131,3 +178,93 @@ div.container {
     align-items: center;
     justify-items: center;
 }
+
+
+.titlepage {
+    text-align: center;
+    padding-bottom: 60px;
+    color: #ffffff;
+}
+
+.titlepage h2 {
+    font-size: 50px;
+    line-height: 55px;
+    padding: 0;
+}
+
+.read_more {
+    font-size: 17px;
+    background-color: transparent;
+    border: #00aeef solid 5px;
+    color: #010a05 !important;
+    padding: 13px 0px;
+    width: 100%;
+    max-width: 210px;
+    text-align: center;
+    display: inline-block;
+    transition: ease-in all 0.5s;
+    border-radius: 40px;
+    font-weight: 500;
+}
+
+.read_more:hover {
+    background: #00aeef;
+    color: #fff !important;
+    transition: ease-in all 0.5s;
+}
+
+.blu {
+    color: rgb(38,14,105)
+}
+
+.d_flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about {
+     background: linear-gradient(to right,rgb(52,32,123), rgb(76,28,204),rgb(100,60,227));
+     padding: 90px 0;
+}
+
+.about .titlepage {
+     text-align: left;
+     padding: 0;
+     max-width: 669px;
+     width: 100%;
+     float: left;
+}
+
+.about .titlepage h2 {
+     margin-bottom: 40px;
+}
+
+.about .titlepage p {
+     font-size: 17px;
+     line-height: 35px;
+     font-weight: 400;
+     padding-bottom: 50px;
+}
+
+.about .titlepage .read_more {
+     float: right;
+}
+
+.about_img figure {
+     margin: 0;
+}
+
+.about_img figure img {
+     width: 100%;
+}
+
+#rodape {
+    background-color: rgb(24, 24, 24);
+    color: white;
+}
+
+.fooder {
+    background-color: rgb(24, 24, 24);
+}
+    

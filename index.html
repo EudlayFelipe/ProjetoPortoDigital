@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TESTE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,36 +15,124 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
 </head>
 
 <body>
 
-<div class="header">
-    <img src="./LandingPage/Nostalgia_Box_SVG_Transparent.png" alt="Ícone">
+<header class="header">
+    <img src="./LandingPage/logo oficial.png" alt="Ícone">
     <h3>Empresa</h3>
-</div>
+    <div id="myMenu" class="menu">
+        <a class="item-login" href="./LoginCadastro/assets/html/login.html">Login</a>
+        <a class="item-cadastre" href="./LoginCadastro/assets/html/cadastro.html">Cadastre-se</a>
+        <a href="./Cobranca/cobranca.html">Cobrança</a>
+        <a href="#">Sobre</a>
+    </div>
+    <button class="icone" style="position:fixed; right:0; top:0" onclick="toggleMenu()">☰</button>
+</header>
  
-<main class="container">
-    <header>
-        <div class="main-content mt-5">
-            <h1 class="principal">
-                Sempre Conectado
-                <br>
-                <a href="#"><button class="gradiente-botão">Saiba mais</button></a>
-            </h1>
-            <img class="foto" src="./LandingPage/Piggy_bank_with_gold_coins_3d_cartoon_style_icon-removebg-preview.png" alt="foto">
+<main>
+    <section class="container home" >
+        <div>
+            <div class="main-content mt-5">
+                <h1 class="principal">
+                    Sempre Conectado
+                    <br>
+                    <a href="#"><button class="gradiente-botão">Saiba mais</button></a>
+                </h1>
+                <img class="foto" src="./LandingPage/Piggy_bank_with_gold_coins_3d_cartoon_style_icon-removebg-preview.png" alt="foto">
+            </div>
         </div>
-    </header>
+    </section>
 
-<div id="myMenu" class="menu">
-    <a class="item-login" href="./LoginCadastro/assets/html/login.html">Login</a>
-    <a class="item-cadastre" href="./LoginCadastro/assets/html/cadastro.html">Cadastre-se</a>
-    <a href="./Cobranca/cobranca.html">Cobrança</a>
-    <a href="#">Sobre</a>
-</div>
+    <section class="teste">
+        <div id="about" class="about">
+            <div class="container-fluid container">
+                <div class="row d_flex">
+                    <div class="col-md-5">
+                        <div class="about_img">
+                            <figure><img class="porco-top" src="/LandingPage/img2.png" alt="#" /></figure>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="titlepage">
+                            <h2>Sobre a <strong><span class="blu">Plataforma</span></strong></h2>
+                            <p>A plataforma tem como intuito receber você, universitário, que possui o interesse na leitura e
+                                busca um grande acervo para aprimorar
+                                seus conhecimentos, além de buscar sempre a inovação e a evolução, para que você tenha uma boa
+                                experiência na plataforma.</p>
+                            <a class="read_more" href="/privacy">Biblioteca</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 
-<button class="icone" style="position:fixed; right:0; top:0" onclick="toggleMenu()">☰</button>
-    
+
+<footer class="py-5 fooder">
+    <div class="container" id="rodape">
+        <div class="row">
+        <div class="col-6 col-md-2 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">About</a></li>
+            </ul>
+        </div>
+
+        <div class="col-6 col-md-2 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">About</a></li>
+            </ul>
+        </div>
+
+        <div class="col-6 col-md-2 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">About</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+            <h5>Subscribe to our newsletter</h5>
+            <p>Monthly digest of what's new and exciting from us.</p>
+            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden">Email address</label>
+                <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                <button class="btn btn-light" type="button">Subscribe</button>
+            </div>
+            </form>
+        </div>
+        </div>
+
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p>© 2023 Company, Inc. All rights reserved.</p>
+        <ul class="list-unstyled d-flex">
+            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+        </ul>
+        </div>
+    </div>
+</footer>
+  
+
 <script>
 function toggleMenu() {
     var menu = document.getElementById("myMenu");
