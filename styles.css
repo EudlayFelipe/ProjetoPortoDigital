@@ -69,7 +69,7 @@ footer {
 }
 
 .links-rodape li {
-    margin-right: 8px; /* Add a value for margin-right */
+    margin-right: 8px; 
     display: flex;
 }
 
@@ -99,7 +99,7 @@ h1 ul {
 
 .left-login,
 .right-login {
-    width: 100%; /* Changed to 100% for full width on smaller screens */
+    width: 100%; 
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -171,7 +171,6 @@ h1 ul {
     box-shadow: 0px 10px 40px --12px #00ff8052;
 }
 
-/* Media queries for responsiveness */
 @media screen and (max-width: 768px) {
     .card-login {
         width: 90%;
