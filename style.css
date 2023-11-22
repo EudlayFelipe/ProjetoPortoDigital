@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -43,7 +45,7 @@ table {
 }
 
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -53,6 +55,7 @@ html {
 body {
     background-attachment: fixed;
     background: linear-gradient(250deg, #27174A, #161832, #101728);
+    
 }
 
 .principal {    
@@ -138,8 +141,35 @@ body {
 }
 
 .test {
+    font-family: 'Poppins', sans-serif;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
+}
+
+.test ul{
+    margin-left: 550px;
+}
+
+.test button{
+    border: none;
+    width: 200px;
+    height: 50px;
+    border-radius: 20pc;
+    background: linear-gradient(to left, rgb(65,37,131), rgb(38,14,105));  
+    transition: .3s;  
+}
+.test button a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.test button:hover{
+    transform: scale(1.04);
 }
 
 .arag {
@@ -152,10 +182,11 @@ body {
 .arag a {
     text-decoration: none;
     color: white;
+    transition: .2s;
 }
 
 .arag a:hover {
-    color: #7529D6;
+    color: #7529D6;    
 }
   
 .header img {
