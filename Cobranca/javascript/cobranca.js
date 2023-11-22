@@ -1,3 +1,4 @@
+// Lendo o HTML
 $(document).ready(function () {
     // Colocando as máscaras
     $("#cardNumber").mask("0000 0000 0000 0000");
@@ -40,9 +41,13 @@ $(document).ready(function () {
         }
     });
 
+    // funcão para desabiliar o botão caso refaça o form
+    $("#reset_form").on("click", function(e){
+
+        $("#gerar_cobranca").addClass("disabled");
+    })
 
     $("#gerar_cobranca").on("click", function (e) {
-
 
         // Recebendo os valores inseridos nos inputs
         nome_input = $("#nome_input").val();
@@ -102,9 +107,11 @@ $(document).ready(function () {
             switch (select_payment) {
                 case "1":
                     $("#pix_div").slideDown();
+                    $(".modal-title").text("Cobrança via Pix")
                     break;
                 case "2":
                     $("#boleto_div").slideDown();
+                    $(".modal-title").text("Cobrança via Boleto")
                     break;
                 case "3":
                     $("#name_note").text(nome_input);
@@ -112,6 +119,7 @@ $(document).ready(function () {
                     $("#cpf_note").text(cpf_input);
                     $("#desc_note").text(input_description);
                     $("#card_div").slideDown();
+                    $(".modal-title").text("Cobrança via Cartão de Crédito")
                     break;
             }
 
@@ -121,4 +129,25 @@ $(document).ready(function () {
 
     });
 
+
 });
+
+const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+const appendAlert = (message, type) => {
+  const wrapper = document.createElement('div')
+  wrapper.innerHTML = [
+    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+    `   <div>${message}</div>`,
+    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+    '</div>'
+  ].join('')
+
+  alertPlaceholder.append(wrapper)
+}
+
+const alertTrigger = document.getElementById('liveAlertBtn')
+if (alertTrigger) {
+  alertTrigger.addEventListener('click', () => {
+    appendAlert('Cobrança enviada com sucesso!', 'success')
+  })
+}   
