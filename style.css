@@ -136,6 +136,27 @@ body {
     padding: 10px;
     color: white;
 }
+
+.test {
+    display: flex;
+    justify-content: center;
+}
+
+.arag {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.arag a {
+    text-decoration: none;
+    color: white;
+}
+
+.arag a:hover {
+    color: #7529D6;
+}
   
 .header img {
     height: 50px;
@@ -265,4 +286,13 @@ a {
 .fooder {
     background-color: rgb(24, 24, 24);
 }
-    
+
+@media screen and (min-width: 720px) {
+    #myMenu {
+        display: none;
+    }
+
+    .icone {
+        display: none;
+    }
+}
