@@ -55,9 +55,8 @@ body {
     background: linear-gradient(250deg, #27174A, #161832, #101728);
 }
 
-.principal {
-    font-size: 90px;
-    font-weight: bold;
+.principal {    
+    font-size: 90px;    
     margin-top: 50%;
     color: white;
     text-shadow: 2px 2px 4px #7529D6;
@@ -148,7 +147,6 @@ a {
     text-decoration: none;
 }
 
-
 .empresa {
     font-size: 30px;
 }
@@ -180,7 +178,7 @@ a {
 }
 
 
-.titlepage {
+.titlepage {    
     text-align: center;
     padding-bottom: 60px;
     color: #ffffff;
@@ -192,11 +190,11 @@ a {
     padding: 0;
 }
 
-.read_more {
+.read_more {   
     font-size: 17px;
     background-color: transparent;
     border: #00aeef solid 5px;
-    color: #010a05 !important;
+    color: #00aeef!important;
     padding: 13px 0px;
     width: 100%;
     max-width: 210px;
