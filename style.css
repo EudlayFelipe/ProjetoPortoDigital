@@ -320,6 +320,10 @@ a {
     margin-top: 100px;
 }
 
+.titlepage .roxo {
+    color: #260e69;
+}
+
 #rodape {
     background-color: rgb(24, 24, 24);
     color: white;
