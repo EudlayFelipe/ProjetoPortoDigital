@@ -274,8 +274,9 @@ a {
 }
 
 .about {
-     background: linear-gradient(to right,rgb(52,32,123), rgb(76,28,204),rgb(100,60,227));
-     padding: 90px 0;
+    height: 100%;
+    background: linear-gradient(to right,rgb(52,32,123), rgb(76,28,204),rgb(100,60,227));
+    padding: 90px 0;
 }
 
 .about .titlepage {
@@ -309,6 +310,10 @@ a {
      width: 100%;
 }
 
+.container-fluid {
+    margin-top: 200px;
+}
+
 #rodape {
     background-color: rgb(24, 24, 24);
     color: white;
@@ -318,7 +323,7 @@ a {
     background-color: rgb(24, 24, 24);
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 1025px) {
     #myMenu {
         display: none;
     }
@@ -326,4 +331,56 @@ a {
     .icone {
         display: none;
     }
+}
+
+@media screen and (max-width: 935px) {
+
+.principal {
+    font-size: 15vw; 
+}
+
+.teste {
+    padding-top: 5vw;
+}
+
+.main-content {
+    display: block;
+    text-align: center;
+}
+
+.foto {
+    display: block;
+    margin: 10% auto 0; 
+    max-width: 80%; 
+    height: auto; 
+    border-radius: 10px;
+}
+
+.container-fluid {
+    margin-top: 0;
+}
+
+.about .titlepage h2 {
+    font-size: 8vw;
+    margin-bottom: 5px;
+}
+
+
+.about .titlepage p {
+    font-size: 3vw;
+    line-height: 6vw;
+    font-weight: 0;
+    padding-bottom: 0px;
+}
+
+.test {
+    display: none;
+}
+
+
+.menu {
+    width: 80%; 
+    height: 100%;
+    border-radius: 10px;
+}
 }
