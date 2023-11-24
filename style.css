@@ -110,6 +110,8 @@ body {
 
 .menu a:hover {
     color: #7a7a7a;
+    transform: scale(1.04);
+
 }
 
 .menu .closebtn {
@@ -170,6 +172,10 @@ body {
 
 .navegacao button:hover{
     transform: scale(1.04);
+}
+
+.barraNav li:hover{
+    transform: scale(1.2);
 }
 
 .barraNav {
