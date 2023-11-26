@@ -6,6 +6,7 @@ $(document).ready(function () {
     $("#cvc_number_input").mask("000");
     $("#cpf_input").mask("000.000.000-00");
     $("#tel_input").mask("(00) 0 0000-0000");
+    $("#parcel_input").mask("00")
 
 
     $(".filter_input").on("change", function (e) {
@@ -30,9 +31,15 @@ $(document).ready(function () {
         }
     });
 
-    // função para descer ou subir o form do cartão de crédito
+    // função para descer ou subir o form do cartão de crédito/parcelas
     $("#select-payment").on("change", function (e) {
         value = $(this).val();
+        if (value == '1' || value == '2' || value == '3') {
+            $("#parcel_form").slideDown();
+        } else {
+            $("#parcel_form").slideUp();
+        }
+
         if (value == '3') {
             $("#card_form").slideDown();
         } else {
@@ -44,14 +51,16 @@ $(document).ready(function () {
     $("#btn-new-cobranca").on("click", function (e) {
         apagarInputs();
         limparModal();
+
         $("#gerar_cobranca").slideDown();
+        $("#parcel_form").slideUp();
         $("#gerar_cobranca").addClass("disabled");
-        $("#btn-new-cobranca").text("Refazer")
+        $("#btn-new-cobranca").text("Refazer");
 
     });
 
     // função para "limpar" meu modal após clicar em "Cancelar" ou no "X"
-    $(".btn-reset-modal").on("click", function(e){
+    $(".btn-reset-modal").on("click", function (e) {
         limparModal();
     });
 
@@ -64,7 +73,7 @@ $(document).ready(function () {
     });
 
     // função para "limpar" meu modal 
-    function limparModal(){
+    function limparModal() {
         $("#liveAlertPlaceholder").slideUp();
         $("#liveAlertBtn").slideDown();
         $("#liveAlertBtn").removeClass("disabled");
@@ -72,7 +81,7 @@ $(document).ready(function () {
         $("#boleto_div").slideUp();
         $("#card_div").slideUp();
     };
-    
+
     // Função para apagar os campos após o usuário enviar a cobrança
     function apagarInputs() {
         $("#nome_input").val("");
@@ -82,6 +91,8 @@ $(document).ready(function () {
         $("#valor_input").val("");
         $("#select_payment").val("");
         $("#description_input").val("");
+        $("#parcel_input").val("");
+        $("#select-payment").val("");
 
         $("#nome_credit_input").val("");
         $("#cardNumber_input").val("");
@@ -91,6 +102,7 @@ $(document).ready(function () {
     };
 
 
+    // Função para preencher os campos do modal e verificar se os inputs estão preenchidos
     $("#gerar_cobranca").on("click", function (e) {
 
         // Recebendo os valores inseridos nos inputs
@@ -101,6 +113,7 @@ $(document).ready(function () {
         valor_input = $("#valor_input").val();
         description_input = $("#description_input").val();
         payment_form = $("#select-payment").val();
+        parcel_input = $("#parcel_input").val();
 
         error = false;
         message = "";
@@ -142,6 +155,12 @@ $(document).ready(function () {
             $("#description_input").addClass("is-valid");
         }
 
+        if (parcel_input = "") {
+            $("#parcel_input").addClass("is-invalid");
+        } else {
+            $("#parcel_input").addClass("is-valid");
+        }
+
         if (payment_form == "") {
             $("#select-payment").addClass("is-invalid");
         } else {
@@ -177,6 +196,7 @@ $(document).ready(function () {
 });
 
 // Scrip do bootstrap para fazer o "alert"
+
 const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
 const appendAlert = (message, type) => {
     const wrapper = document.createElement('div')
