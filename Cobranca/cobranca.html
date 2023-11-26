@@ -9,6 +9,7 @@
     <!-- Include Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="../LandingPage/logo oficial.png"/>
     <title>Cobrança</title>
 </head>
 
@@ -32,18 +33,23 @@
         </div>
     </nav>
 
+
     <!-- Modal -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
         <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
-                <div class="center" id="liveAlertPlaceholder"></div>
+
+                <!-- Alert do bootstrap -->
+                <div class="text-center" id="liveAlertPlaceholder"></div>
+
                 <div class="modal-header">
                     <h1 class="modal-title fs-5 title-modal" id="staticBackdropLabel">...</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close btn-reset-modal" id="btn-close-modal" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
 
+                <div class="modal-body">
                     <!-- Div do conteúdo da Nota Fiscal -> Caso escolha Cartão de Crédito -->
                     <div class="col-md-12" id="card_div" style="display: none;">
                         <!-- Card da Nota Fiscal -> Caso escolha Cartão de Crédito -->
@@ -92,7 +98,7 @@
                                         <div class="mb-3 text-center">
                                             <textarea class="form-control w-100" name="" id="" cols="30"
                                                 rows="5">00020126460014br.gov.bcb.pix0114+55799992112000206102342520400005303986540583.005802BR5915Guilherme Viana6007ARACAJU62120508ZAZCPANY63046EFC</textarea>
-
+                                    
                                             <!-- <div class="mb-2">
                                                 <a href="#" class="btn btn-pill copyPix w-100">Copiar</a>
                                             </div>
@@ -102,8 +108,10 @@
                                             </div> -->
 
                                         </div>
+
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -127,7 +135,7 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-secondary btn-reset-modal" id="btn-cancel-modal" data-bs-dismiss="modal">Cancelar</button>
                     <button type="submit" class="btn btn-success" id="liveAlertBtn">Enviar Cobranca</button>
                 </div>
             </div>
@@ -141,7 +149,7 @@
                 <div class="row justify-content-center">
                     <!-- Div do conteúdo da Cobrança -->
                     <div class="exemplo col-md-8">
-                        <form>
+                        <!-- <form> -->
                             <!-- Card da Cobrança -->
                             <div class="card"
                                 style="border-color: white; box-shadow: 3px 3px rgb(182, 181, 181); border-radius: 1%;">
@@ -215,7 +223,7 @@
                                             <div class="col-md-7">
                                                 <div class="content-name-client input-group mb-3">
                                                     <span class="input-group-text">Nome:</span>
-                                                    <input id="" class="form-control" type="text"
+                                                    <input id="nome_credit_input" class="form-control" type="text"
                                                         placeholder="Digite aqui" aria-label="default input example"
                                                         required>
                                                 </div>
@@ -223,7 +231,7 @@
                                             <div class="col-md-5">
                                                 <div class="content-name-client input-group mb-3">
                                                     <span class="input-group-text">CVC:</span>
-                                                    <input id="cvc_number" class="form-control" type="text"
+                                                    <input id="cvc_number_input" class="form-control" type="text"
                                                         placeholder="Digite aqui" aria-label="default input example"
                                                         required>
                                                 </div>
@@ -231,7 +239,7 @@
                                             <div class="col-md-7">
                                                 <div class="content-name-client input-group mb-3">
                                                     <span class="input-group-text">Número</span>
-                                                    <input id="cardNumber" class="form-control" type="text"
+                                                    <input id="cardNumber_input" class="form-control" type="text"
                                                         placeholder="0000 0000 0000 0000"
                                                         aria-label="default input example" required>
                                                 </div>
@@ -239,7 +247,7 @@
                                             <div class="col-md-5">
                                                 <div class="content-name-client input-group mb-3">
                                                     <span class="input-group-text">Validade</span>
-                                                    <input id="expireDate" class="form-control" type="text"
+                                                    <input id="expireDate_input" class="form-control" type="text"
                                                         placeholder="06/2024" aria-label="default input example"
                                                         required>
                                                 </div>
@@ -268,12 +276,12 @@
                                     <div class="mb-3">
                                         <label for="exampleFormControlTextarea1" class="form-label">Descrição da
                                             cobrança:</label>
-                                        <textarea id="input-description" class="form-control" rows="3"
+                                        <textarea id="description_input" class="form-control filter_input" rows="3"
                                             placeholder="Descreva aqui o que será cobrado"></textarea>
                                     </div>
                                     <!-- btns  -->
                                     <div class="row justify-content-around">
-                                        <button class="btn btn-secondary col-5 mb-3" id="reset_form" type="reset">
+                                        <button class="btn btn-secondary col-5 mb-3" id="btn-new-cobranca" type="reset">
                                             Refazer </button>
 
                                         <button class="btn btn-success col-5 mb-3 disabled" id="gerar_cobranca"
@@ -282,7 +290,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </form>
+                        <!-- </form> -->
                     </div>
                 </div>
             </div>
