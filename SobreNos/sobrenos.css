@@ -197,6 +197,17 @@ p {
     margin-right: 10px;
 }
 
+.navegacao {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
+}
+
 .navegacao ul{
     margin-left: 550px;
 }
@@ -216,6 +227,10 @@ p {
 
 .navegacao button:hover{
     transform: scale(1.04);
+}
+
+.barraNav li:hover{
+    transform: scale(1.2);
 }
 
 .barraNav {
