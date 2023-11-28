@@ -275,3 +275,11 @@ a {
         display: none;
     }
 }
+
+@media screen and (min-width: 769px) {
+    .foto {
+        margin-top: -50px;
+        margin-left: 58px;
+    }
+
+}
