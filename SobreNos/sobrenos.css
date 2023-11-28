@@ -120,7 +120,7 @@ p {
 }
 
 .foto {
-    margin-top: -50px;
+    margin-top: -70px;
     margin-left: 148px;
 }
 
@@ -276,10 +276,16 @@ a {
     }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (max-width: 760px) {
     .foto {
         margin-top: -50px;
         margin-left: 58px;
     }
+}
 
+@media screen and (max-width: 1320px) {
+    .foto {
+        margin-top: -50px;
+        margin-left: 58px;
+    }
 }
