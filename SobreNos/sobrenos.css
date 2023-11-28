@@ -105,7 +105,9 @@ p {
     }
 }
 
-
+.barraNav li:hover{
+    transform: scale(1.2);
+}
 
 .home {
     height: 100vh;
@@ -119,12 +121,9 @@ p {
 
 .foto {
     margin-top: -50px;
-    margin-left: 58px;
+    margin-left: 148px;
 }
 
-.paragrafo {
-    margin-top: 10px;
-}
 
 .menu {
     position: fixed;
