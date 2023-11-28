@@ -9,4 +9,8 @@
 
 }
 
-/* Para estilizar, só basta colocar um novo nome na class do que vc quer estilizar e chamar ela aqui. Ex: */
+.body{
+    background: linear-gradient(250deg, #27174A, #161832, #101728);
+}
+
+

@@ -6,14 +6,31 @@ $(document).ready(function () {
     $("#cvc_number_input").mask("000");
     $("#cpf_input").mask("000.000.000-00");
     $("#tel_input").mask("(00) 0 0000-0000");
-    $("#parcel_input").mask("00")
+    $("#parcel_input").mask("00");
 
+    // Tratamento de erro para a quantidade de parcelas
+    $("#parcel_input").on("input", function (e) {
+        $now = $(this).val();
+        $now = parseInt($now, 10);
+        if ($now > 12) {
+            $(this).val("");
+            $("#parcel_error").text("O máximo de parcelas é 12.");
+        } else {
+            $("#parcel_error").text("");
+        }
+    });
 
+    // Função para validar os inputs e ativar o botão de "confirmar"
     $(".filter_input").on("change", function (e) {
         error = 0;
+
         $(".filter_input").each(function () {
             if ($(this).val() == "") {
-                error++;
+                if ($(this).hasClass("novalidate")) {
+                    console.log("ok");
+                } else {
+                    error++;
+                }
             }
         });
 
@@ -22,7 +39,6 @@ $(document).ready(function () {
         if (payf == "") {
             error++;
         }
-
 
         if (error == 0) {
             $("#gerar_cobranca").removeClass("disabled");
@@ -68,13 +84,14 @@ $(document).ready(function () {
     $("#liveAlertBtn").on("click", function (e) {
         $("#liveAlertPlaceholder").slideDown();
         $("#liveAlertBtn").addClass("disabled");
-        $("#btn-new-cobranca").text("Nova cobrança")
-        $("#btn-cancel-modal").text("Fechar")
+        $("#modal-header-main").addClass("d-none");
+        $("#btn-new-cobranca").text("Nova cobrança");
+        $("#btn-cancel-modal").text("Fechar");
     });
 
     // função para "limpar" meu modal 
     function limparModal() {
-        $("#liveAlertPlaceholder").slideUp();
+        $("#liveAlertPlaceholder").empty();
         $("#liveAlertBtn").slideDown();
         $("#liveAlertBtn").removeClass("disabled");
         $("#pix_div").slideUp();
@@ -91,7 +108,7 @@ $(document).ready(function () {
         $("#valor_input").val("");
         $("#select_payment").val("");
         $("#description_input").val("");
-        $("#parcel_input").val("");
+        $("#parcel_input").val(1);
         $("#select-payment").val("");
 
         $("#nome_credit_input").val("");
@@ -100,6 +117,43 @@ $(document).ready(function () {
         $("#cvc_number_input").val("");
         $(".filter_input").removeClass("is-valid");
     };
+
+    // Função do calculo da tarifa
+    function calcularTarifa(tax) {
+        $porc = (valor_input / 100) * tax;
+        // $parcelado = (valor_input/parcel_input);
+        if (parcel_input < 1) {
+            parcel_input = 1;
+        }
+        if (select_payment != "") {
+            $("#value_subtotal").text("R$: " + valor_input);
+            $("#value_parcela").text("R$: " + (valor_input / parcel_input));
+            $("#value_tarifa").text("R$: - " + $porc);
+            $("#value_total").text("R$: + " + (valor_input - $porc));
+
+            $("#confirm_nome").text(nome_input);
+            $("#confirm_cpf").text(cpf_input);
+            $("#confirm_value").text(valor_input);
+            $("#confirm_parcela").text(parcel_input);
+        };
+    };
+
+    // Ativando/Desativando o input de parcelas
+    $("input[name=flexRadioDisabled]").on("change", function (e) {
+        e.preventDefault();
+        $checked = $("input[name=flexRadioDisabled]:checked");
+        if ($checked.length > 0) {
+            $val = $checked.val();
+            console.log($val);
+            if ($val == 1) {
+                $("#parcel_input").prop("disabled", false);
+            } else {
+                $("#parcel_input").prop("disabled", true);
+            }
+        } else {
+            console.log("error");
+        }
+    });
 
 
     // Função para preencher os campos do modal e verificar se os inputs estão preenchidos
@@ -155,10 +209,10 @@ $(document).ready(function () {
             $("#description_input").addClass("is-valid");
         }
 
-        if (parcel_input = "") {
-            $("#parcel_input").addClass("is-invalid");
-        } else {
+        if (parcel_input >= 1) {
             $("#parcel_input").addClass("is-valid");
+        } else {
+            console.log("error")
         }
 
         if (payment_form == "") {
@@ -167,14 +221,19 @@ $(document).ready(function () {
             $("#select-payment").addClass("is-valid");
             select_payment = $("#select-payment").val();
 
+
             switch (select_payment) {
                 case "1":
                     $("#pix_div").slideDown();
-                    $(".modal-title").text("Cobrança via Pix")
+                    $(".modal-title").text("Cobrança via Pix");
+                    $("#desc_note").text(description_input);
+                    calcularTarifa(1);
                     break;
                 case "2":
                     $("#boleto_div").slideDown();
-                    $(".modal-title").text("Cobrança via Boleto")
+                    $(".modal-title").text("Cobrança via Boleto");
+                    $("#desc_note").text(description_input);
+                    calcularTarifa(2);
                     break;
                 case "3":
                     $("#name_note").text(nome_input);
@@ -183,36 +242,37 @@ $(document).ready(function () {
                     $("#desc_note").text(description_input);
                     $("#card_div").slideDown();
                     $(".modal-title").text("Cobrança via Cartão de Crédito")
+                    calcularTarifa(5);
                     break;
             }
-
         }
 
         $("#gerar_cobranca").slideUp();
 
     });
 
+    const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+    const appendAlert = (message, type) => {
+        const wrapper = document.createElement('div')
+        wrapper.innerHTML = [
+            `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+            `   <div>${message}</div>`,
+            '   <button type="button" class="btn-close btn-reset-modal" data-bs-dismiss="modal" aria-label="Close"></button>',
+            '</div>'
+        ].join('')
+
+        alertPlaceholder.append(wrapper)
+    }
+
+    const alertTrigger = document.getElementById('liveAlertBtn')
+    if (alertTrigger) {
+        alertTrigger.addEventListener('click', () => {
+            appendAlert('Cobrança enviada com sucesso!', 'success')
+        })
+    }
 
 });
 
 // Scrip do bootstrap para fazer o "alert"
 
-const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-const appendAlert = (message, type) => {
-    const wrapper = document.createElement('div')
-    wrapper.innerHTML = [
-        `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-        `   <div>${message}</div>`,
-        // '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-        '</div>'
-    ].join('')
 
-    alertPlaceholder.append(wrapper)
-}
-
-const alertTrigger = document.getElementById('liveAlertBtn')
-if (alertTrigger) {
-    alertTrigger.addEventListener('click', () => {
-        appendAlert('Cobrança enviada com sucesso!', 'success')
-    })
-}   

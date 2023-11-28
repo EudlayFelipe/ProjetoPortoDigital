@@ -14,18 +14,23 @@
 </head>
 
 
-<body class="body container-fluid" style="background-color: rgb(247, 247, 247);">
+<body class="body container-fluid">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: rgb(247, 247, 247) ;">
+    <nav class="navbar navbar-dark navbar-expand-md" role="navigation">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Empresa</a>
+            <a class="navbar-brand" href="#"><img src="../LandingPage/logo oficial.png" alt="Logo" width="50"
+                    height="50">
+                <h3 class="name-logo d-inline-block align-text-top">Piggy Bank</h3>
+            </a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="/LandingPage/index.html">Home</a>
+                    <a class="nav-link active" aria-current="page" href="../index.html"></a>
                     <a class="nav-link" href="#">Features</a>
                     <a class="nav-link" href="#">Pricing</a>
                 </div>
@@ -38,47 +43,19 @@
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
 
-        <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
             <div class="modal-content">
 
                 <!-- Alert do bootstrap -->
-                <div class="text-center" id="liveAlertPlaceholder"></div>
+                <div id="liveAlertPlaceholder"></div>
 
-                <div class="modal-header">
+                <div class="modal-header" id="modal-header-main">
                     <h1 class="modal-title fs-5 title-modal" id="staticBackdropLabel">...</h1>
                     <button type="button" class="btn-close btn-reset-modal" id="btn-close-modal" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
-
+                <!-- Modal para descer as telas do Select Payment -->
                 <div class="modal-body">
-                    <!-- Div do conteúdo da Nota Fiscal -> Caso escolha Cartão de Crédito -->
-                    <div class="col-md-12" id="card_div" style="display: none;">
-                        <!-- Card da Nota Fiscal -> Caso escolha Cartão de Crédito -->
-                        <div class="card">
-                            <div class="card-header border-0">
-                                <h3 class="mb-0">Nota Fiscal</h3>
-                            </div>
-                            <div class="card-body">
-                                <div class="name-note mb-3">
-                                    <h5 class="d-inline">Nome:</h5>
-                                    <p class="d-inline" id="name_note"></p>
-                                </div>
-                                <div class="cpf-note mb-3">
-                                    <h5 class="d-inline">CPF:</h5>
-                                    <p class="d-inline" id="cpf_note"></p>
-                                </div>
-                                <div class="email-note mb-3">
-                                    <h5 class="d-inline">Email:</h5>
-                                    <p class="d-inline" id="email_note"></p>
-                                </div>
-                                <div class="mb-3">
-                                    <h5 class="description-note">Descrição</h5>
-                                    <textarea class="form-control" id="desc_note" rows="3"></textarea>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
 
                     <!-- Div do Conteúdo do QR Code -> Caso escolha Pix -->
                     <div class="col-md-12" id="pix_div" style="display:none;">
@@ -86,33 +63,15 @@
                         <div class="card" id="card-payment">
                             <div class="card-body">
 
-                                <div class="row text-center">
-                                    <h2 class="mt-0">Pix Copia e Cola</h2>
-
-                                    <div class="col-md-12">
-                                        <div>
-                                            <img class="w-50" src="./images/qrcode.png" alt="" srcset="">
-                                        </div>
+                                <div class="d-flex justify-content-center row">
+                                    <div class="col-md-3 d-flex justify-content-center mb-3">
+                                        <img src="./images/qrcode.png" alt="" srcset="" style="max-width: 166px;">
                                     </div>
-
-                                    <div class="col-lg-12">
-                                        <div class="mb-3 text-center">
-                                            <textarea class="form-control w-100" name="" id="" cols="30"
-                                                rows="5">00020126460014br.gov.bcb.pix0114+55799992112000206102342520400005303986540583.005802BR5915Guilherme Viana6007ARACAJU62120508ZAZCPANY63046EFC</textarea>
-
-                                            <!-- <div class="mb-2">
-                                                <a href="#" class="btn btn-pill copyPix w-100">Copiar</a>
-                                            </div>
-
-                                            <div class="mb-3" id="copySuccess" style="display: none;">
-                                                <h3 class="text-success">Pix copiado com sucesso!</h3>
-                                            </div> -->
-
-                                        </div>
-
+                                    <div class="col-md-9"><label for="" class="form-label">Pix Copia e Cola</label>
+                                        <textarea class="form-control w-100" name="" id="" cols="30"
+                                            rows="5">00020126460014br.gov.bcb.pix0114+55799992112000206102342520400005303986540583.005802BR5915Guilherme Viana6007ARACAJU62120508ZAZCPANY63046EFC</textarea>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -123,7 +82,7 @@
 
                         <div class="card">
                             <div class="card-body">
-                                <div class="row">
+                                <div class="row text-center">
 
                                     <a href="./boleto.pdf" download="boleto.pdf" class="text-black">Baixar boleto
                                         <img src="./images/download-direto.png" class="ms-2" width="17" alt="">
@@ -133,13 +92,76 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Card do retorno das cobranças -->
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-center row">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="content-name-client input-group mb-3">
+                                            <span class="input-group-text">Nome:</span>
+                                            <span class="form-control" id="confirm_nome"></span>
+                                        </div>
+                                    </div>
 
+                                    <div class="col-md-6">
+                                        <div class="content-name-client input-group mb-3">
+                                            <span class="input-group-text">CPF:</span>
+                                            <span class="form-control" id="confirm_cpf"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="content-name-client input-group mb-3">
+                                            <span class="input-group-text">Cobrança R$:</span>
+                                            <span class="form-control" id="confirm_value"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="content-name-client input-group mb-3">
+                                            <span class="input-group-text">Parcelas:</span>
+                                            <span class="form-control" id="confirm_parcela"></span>
+                                        </div>
+                                    </div>
+                                    <div class=" col-md-12">
+                                        <label for="exampleFormControlTextarea1" class="form-label">Descrição da
+                                            cobrança:</label>
+                                        <textarea class="form-control" id="desc_note" rows="3"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="row d-flex justify-content-between align-items-center">
+                                    <div class="col-md-5 col-sm-5">
+                                        <h4 class="text-cobranca text-secondary mb-2">Subtotal <span
+                                                id="value_subtotal"></span>
+                                        </h4>
+                                        <h4 class="text-cobranca text-secondary mb-2">Val. Parcelas <span
+                                                id="value_parcela"></span>
+                                        </h4>
+                                    </div>
+
+                                    <div class="col-md-5 col-sm-5">
+                                        <h4 class="text-cobranca text-danger mb-2">Tarifa <span
+                                                id="value_tarifa"></span>
+                                        </h4>
+                                        <h3 class="text-cobranca text-success mb-2">Total <span id="value_total"></span>
+                                        </h3>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                                
+
+                            
+                        </div>
+                    </div>
+
+                    <div class="modal-footer justify-content-md-end">
+                        <button type="button" class="btn btn-secondary btn-reset-modal mb-3" id="btn-cancel-modal"
+                            data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-success mb-3" id="liveAlertBtn">Enviar Cobranca</button>
+                    </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary btn-reset-modal" id="btn-cancel-modal"
-                        data-bs-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-success" id="liveAlertBtn">Enviar Cobranca</button>
-                </div>
+
             </div>
         </div>
     </div>
@@ -151,59 +173,68 @@
                 <div class="row justify-content-center">
                     <!-- Div do conteúdo da Cobrança -->
                     <div class="exemplo col-md-8">
-                        <!-- <form> -->
                         <!-- Card da Cobrança -->
                         <div class="card"
                             style="border-color: white; box-shadow: 0px 0px 12px 6px rgb(182, 181, 181); border-radius: 1em;">
+
                             <div class="card-header border-0" style="background-color: transparent;">
                                 <h3 class="mb-0">Cobrança</h3>
                             </div>
-                            <div class="card-body">
 
+                            <div class="card-body">
+                                <!-- Div input name -->
                                 <div class="content-name-client input-group mb-3">
                                     <span class="input-group-text">Nome:</span>
+
                                     <input id="nome_input" class="form-control filter_input" type="text"
                                         placeholder="Nome" aria-label="default input example" required>
                                 </div>
-
+                                <!-- Div input CPF -->
                                 <div class="content-cpf-client input-group mb-3">
                                     <span class="input-group-text">CPF:</span>
+
                                     <input id="cpf_input" class="form-control filter_input" type="text"
                                         placeholder="123.456.789-0" aria-label="default input example" required>
                                 </div>
-
+                                <!-- Div input E-Mail -->
                                 <div class="content-email-client input-group mb-3">
                                     <span class="input-group-text">E-Mail:</span>
+
                                     <input id="email_input" type="email" class="form-control filter_input"
                                         id="exampleFormControlInput1" placeholder="nome@exemplo.com" required>
                                 </div>
-
+                                <!-- Div input Telephone -->
                                 <div class="content-email-client input-group mb-3">
                                     <span class="input-group-text">Telefone:</span>
+
                                     <input id="tel_input" type="tel" class="form-control filter_input"
                                         id="exampleFormControlInput1" placeholder="(00) 0 0000-0000" required>
                                 </div>
 
+                                <!-- Div form Value Charge + form Select Payment -->
                                 <div class="row">
-
+                                    <!-- Column form Value Charge -->
                                     <div class="col-md-6">
                                         <div class="form-group mb-3">
                                             <label for="value_cobranca" class="form-label">Valor da
                                                 cobrança:</label>
+                                            <!-- Div input Value Charge -->
                                             <div class="input-group">
                                                 <span class="input-group-text">R$</span>
+
                                                 <input type="text" id="valor_input" class="form-control filter_input"
                                                     aria-label="Amount (to the nearest dollar)" placeholder="00,00"
                                                     required>
                                             </div>
                                         </div>
                                     </div>
-
+                                    <!-- Column form Select Payment -->
                                     <div class="col-md-6">
                                         <div class="content-form-payment form-group mb-3">
                                             <label for="exampleFormControlInput1" class="form-label">Escolha a forma
                                                 de
                                                 cobrança:</label>
+
                                             <select id="select-payment"
                                                 class="content-form-payment form-select filter_input"
                                                 aria-label="Default select example">
@@ -255,23 +286,30 @@
                                     </div>
 
                                 </div>
+
                                 <!-- Inputs de Parcelas -->
                                 <div class="row justify-content-between" id="parcel_form" style="display: none;">
                                     <div class="row col-md-6" id="parcel_check">
+
                                         <label for="parcel_check" class="form-label">Parcelado:</label>
-                                        <div class="col-md-2">
+
+                                        <div class="col-md-3 mb-3 mb-3">
                                             <div class="form-check">
-                                                <input class="form-check-input parcel_check_input_1" type="radio"
-                                                    name="flexRadioDisabled" id="flexRadioCheckedDisabled">
-                                                <label class="form-check-label" for="flexRadioCheckedDisabled">
+                                                <input class="form-check-input parcel_check_input" type="radio"
+                                                    name="flexRadioDisabled" id="flexRadioChecked" value="1">
+
+                                                <label class="form-check-label" for="flexRadioChecked">
                                                     Sim
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="col-md-2">
+
+                                        <div class="col-md-3 mb-3">
                                             <div class="form-check">
-                                                <input class="form-check-input parcel_check_input_2" type="radio"
-                                                    name="flexRadioDisabled" id="flexRadioCheckedDisabled" checked>
+                                                <input class="form-check-input parcel_check_input" type="radio"
+                                                    name="flexRadioDisabled" id="flexRadioCheckedDisabled" value="0"
+                                                    checked>
+
                                                 <label class="form-check-label" for="flexRadioCheckedDisabled">
                                                     Não
                                                 </label>
@@ -284,9 +322,11 @@
                                             <label for="qtd_parcel" class="form-label">Quantidade de Parcelas:</label>
                                             <div class="input-group">
                                                 <span class="input-group-text">Qtd.</span>
-                                                <input type="text" id="parcel_input" class="form-control filter_input"
-                                                    placeholder="00" required>
+                                                <input type="text" id="parcel_input"
+                                                    class="form-control filter_input novalidate" placeholder="03"
+                                                    value="1" disabled>
                                             </div>
+                                            <p class="mt-1 text-danger" id="parcel_error"></p>
                                         </div>
                                     </div>
                                 </div>
@@ -309,7 +349,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- </form> -->
                     </div>
                 </div>
             </div>
