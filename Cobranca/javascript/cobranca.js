@@ -97,6 +97,7 @@ $(document).ready(function () {
         $("#pix_div").slideUp();
         $("#boleto_div").slideUp();
         $("#card_div").slideUp();
+        $("#modal-header-main").removeClass("d-none");
     };
 
     // Função para apagar os campos após o usuário enviar a cobrança
