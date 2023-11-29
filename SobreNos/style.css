@@ -55,75 +55,30 @@ html {
 body {
     background-attachment: fixed;
     background: linear-gradient(250deg, #27174A, #161832, #101728);
-    
 }
-
-
+    
 .roxo {
     color: #7529D6;
-    text-shadow: white;
 }
 
-.principal {    
-    font-size: 35px;    
-    margin-top: 22vh;
-    color: white;
-    text-shadow: 2px 2px 4px #7529D6;
-    max-width: 100%;
-    max-height: 100%;
-}
-
-p {
-    text-align: justify;
-}
-
-.paragrafo {
-    font-size: 15px;
-    color: white;
-    float: left;
-    text-align: justify; 
-    max-width: 50%;
-    
-}
-
-.main-content {
-    .principal {    
-        font-size: 35px;    
-        margin-top: 22vh;
-        color: white;
-        text-shadow: 2px 2px 4px #7529D6;
-        max-width: 100%;
-        max-height: 100%;
-    }
-
-    .paragrafo {
-        font-size: 15px;
-        color: white;
-        float: left;
-        text-align: justify; 
-        max-width: 50%;
-    }
-}
-
-.barraNav li:hover{
-    transform: scale(1.2);
-}
-
-.home {
-    height: 100vh;
-}
-
-.teste {
+.quemSomos {
     padding-top: 10px;
     background: linear-gradient(16px, #27174A, #161832, #101728);
     height: 100vh;
 }
 
-.foto {
-    margin-top: -70px;
-    margin-left: 148px;
+.foto{
+    padding: 0;
+    height: 500px;
+    width: 500px;
+    margin-top: 30%;
+    margin-left: 40%;
+    border-radius: 20px;
 }
 
+#myMenu {
+  width: 0;
+}
 
 .menu {
     position: fixed;
@@ -150,6 +105,8 @@ p {
 
 .menu a:hover {
     color: #7a7a7a;
+    transform: scale(1.04);
+
 }
 
 .menu .closebtn {
@@ -188,23 +145,7 @@ p {
     position: fixed;
     top: 0;
     width: 100%;
-    
-}
-
-.header img {
-    height: 50px;
-    width: 50px;
-    margin-right: 10px;
-}
-
-.navegacao {
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
+    z-index: 9999;
     
 }
 
@@ -250,12 +191,108 @@ p {
     color: #7529D6;    
 }
   
+.header img {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
 
 a {
     text-decoration: none;
 }
 
 
+.titlepage {    
+    text-align: center;
+    padding-bottom: 60px;
+    color: #ffffff;
+}
+
+.titlepage h2 {
+    font-size: 50px;
+    line-height: 55px;
+    padding: 0;
+}
+
+.read_more {   
+    font-size: 17px;
+    background-color: transparent;
+    border: #00aeef solid 5px;
+    color: #00aeef!important;
+    padding: 13px 0px;
+    width: 100%;
+    max-width: 210px;
+    text-align: center;
+    display: inline-block;
+    transition: ease-in all 0.5s;
+    border-radius: 40px;
+    font-weight: 500;
+}
+
+.read_more:hover {
+    background: #00aeef;
+    color: #fff !important;
+    transition: ease-in all 0.5s;
+}
+
+.blu {
+    color: rgb(38,14,105)
+}
+
+.d_flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about {
+    height: 100%;
+    background: linear-gradient(250deg, #27174A, #161832, #101728);
+    padding: 90px 0;
+}
+
+.about .titlepage {
+    text-align: left;
+    padding: 0;
+    max-width: 669px;
+    width: 100%;
+    float: left;
+}
+
+.about .titlepage h2 {
+    margin-bottom: 40px;
+}
+
+.about .titlepage p {
+    font-size: 17px;
+    line-height: 35px;
+    font-weight: 400;
+    padding-bottom: 50px;
+}
+
+.about .porco-top {
+    float: right;
+}
+
+.about .titlepage .read_more {
+     float: right;
+}
+
+.about_img figure {
+     margin: 0;
+}
+
+.about_img figure img {
+     width: 100%;
+}
+
+.container-fluid {
+    margin-top: 100px;
+}
+
+.titlepage .roxo {
+    color: #260e69;
+}
 
 #rodape {
     background-color: rgb(24, 24, 24);
@@ -266,7 +303,7 @@ a {
     background-color: rgb(24, 24, 24);
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 1025px) {
     #myMenu {
         display: none;
     }
@@ -276,10 +313,53 @@ a {
     }
 }
 
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 935px) {
+    .principal {
+        font-size: 15vw; 
+    }
+
+    .quemSomos {
+        padding-top: 5vw;
+    }
+
+    .main-content {
+        display: block;
+        text-align: center;
+    }
+
     .foto {
-        margin-top: -50px;
-        margin-left: 58px;
+        display: block;
+        margin: 10% auto 0; 
+        max-width: 80%; 
+        height: auto; 
+        border-radius: 10px;
+    }
+
+    .container-fluid {
+        margin-top: 0;
+    }
+
+    .about .titlepage h2 {
+        font-size: 8vw;
+        margin-bottom: 5px;
+    }
+
+
+    .about .titlepage p {
+        font-size: 3.5vw;
+        line-height: 4.8vw;
+        font-weight: 0;
+        padding-bottom: 0px;
+    }
+
+    .navegacao {
+        display: none;
+    }
+
+
+    .menu {
+        width: 80%; 
+        height: 100%;
+        border-radius: 10px;
     }
 }
-
