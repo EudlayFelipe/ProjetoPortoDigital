@@ -36,5 +36,5 @@ const btCadastro = document.querySelector('.bt-cadastro');
 btCadastro.addEventListener('click', cadastrar);
 
 function cadastrar() {
-  window.open("login.html");
+  window.open("/ProjetoPortoDigital/LoginCadastro/html/login.html");
 }

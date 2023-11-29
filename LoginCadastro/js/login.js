@@ -24,7 +24,7 @@ function entrar() {
   window.location.href = 'home.html';
 }
 function entrar() {
-    window.location.href = "/cobranca/cobranca.html";
+    window.location.href = "/ProjetoPortoDigital/Cobranca/cobranca.html";
 }
   
 
