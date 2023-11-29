@@ -25,9 +25,9 @@
     <img src="./LandingPage/logo oficial.png" alt="Ícone">
     <h3>Piggy Bank</h3>    
     <div id="myMenu" class="menu">
-        <a class="item-login" href="./LoginCadastro/assets/html/login.html">Login</a>
+        <a class="item-login" href="/ProjetoPortoDigital/LoginCadastro/assets/html/login.html">Login</a>
         <a class="item-cadastre" href="#">Clientes</a>
-        <a class="item-cadastre" href="./SobreNos/sobrenos.html">Sobre Nós</a>
+        <a class="item-cadastre" href="/ProjetoPortoDigital/SobreNos/sobrenos.html">Sobre Nós</a>
         <a class="item-cadastre" href="#quemSomos">Quem Somos</a>
         <a class="item-cadastre" href="#">Tarifas</a>
         <a href="/ProjetoPortoDigital/LoginCadastro/html/login.html">Acesso ao Sistema</a>
@@ -38,9 +38,9 @@
 <header class="navegacao">
     <nav>
         <ul class="barraNav">
-            <li><a href="#">Login</a></li>
+            <li><a href="/ProjetoPortoDigital/LoginCadastro/html/login.html">Login</a></li>
             <li><a href="#">Clientes</a></li>
-            <li><a href="./SobreNos/sobrenos.html">Sobre Nós</a></li>
+            <li><a href="/ProjetoPortoDigital/SobreNos/sobrenos.html">Sobre Nós</a></li>
             <li><a href="#quemSomos">Quem Somos</a></li>            
             <li><a href="#">Tarifas</a></li>            
         </ul>
@@ -56,7 +56,7 @@
                 <h1 class="principal">
                     Sempre Conectado
                     <br>
-                    <a href="/SobreNos/sobrenos.html"><button class="gradiente-botão">Saiba mais</button></a>
+                    <a href="/ProjetoPortoDigital/SobreNos/sobrenos.html"><button class="gradiente-botão">Saiba mais</button></a>
                 </h1>
                 <img class="foto" src="./LandingPage/fotoPrincipal.png" alt="foto">
             </div>
@@ -97,9 +97,9 @@
             <ul class="nav flex-column">
             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Home</a></li>
             <li class="nav-item mb-2"><a href="#quemSomos" class="nav-link p-0 text-light">Quem Somos</a></li>
-            <li class="nav-item mb-2"><a href="/Cobranca/cobranca.html" class="nav-link p-0 text-light">Cobrança</a></li>
+            <li class="nav-item mb-2"><a href="/ProjetoPortoDigital/Cobranca/cobranca.html" class="nav-link p-0 text-light">Cobrança</a></li>
             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Tarifas</a></li>
-            <li class="nav-item mb-2"><a href="/SobreNos/sobrenos.html" class="nav-link p-0 text-light">Sobre Nós</a></li>
+            <li class="nav-item mb-2"><a href="/ProjetoPortoDigital/SobreNos/sobrenos.html" class="nav-link p-0 text-light">Sobre Nós</a></li>
             </ul>
         </div>
 
@@ -132,7 +132,31 @@
             <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                 <label for="newsletter1" class="visually-hidden">Sugestão</label>
                 <input id="newsletter1" type="text" class="form-control" placeholder="Sugestão">
-                <button class="btn btn-light" type="button">Enviar</button>
+                <button class="btn btn-light" type="button" onclick="enviarMensagem()">Enviar</button>
+
+                <script>
+                    function enviarMensagem() {
+                        var input = document.getElementById("newsletter1");
+                        var mensagem = input.value;
+                        
+                        
+                        localStorage.setItem("mensagemEnviada", mensagem);
+                        
+                        
+                        input.value = "";
+                        
+                        
+                        var sucesso = document.createElement("p");
+                        sucesso.textContent = "Enviado com sucesso!!";
+                        input.parentNode.appendChild(sucesso);
+                    }
+                    
+                    var mensagemSalva = localStorage.getItem("mensagemEnviada");
+                    if (mensagemSalva) {
+                        var input = document.getElementById("newsletter1");
+                        input.value = mensagemSalva;
+                    }
+                </script>
             </div>
             </form>
         </div>
