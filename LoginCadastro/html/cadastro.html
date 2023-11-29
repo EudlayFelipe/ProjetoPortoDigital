@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/LoginCadastro/css/cadastro.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap">
+  <title>Cadastro</title>
+</head>
+<body>
+  <div class="logo">
+    <a href="index.html"><img src="/LoginCadastro/images/logo oficial.png" alt="Logo"></a>
+  </div>
+  
+  <div class="main-cadastro">
+    <div class="left-cadastro">
+      <img src="/LoginCadastro/images/piggy.svg" alt="Animation">
+    </div>
+    <div class="right-cadastro">
+      <div class="card-cadastro">
+        <h1>Cadastro</h1>
+        <main>
+          <div class="social-media">
+            <a href="https://www.google.com">
+              <img src="/LoginCadastro/images/google.png" alt="Google">
+            </a>
+            <a href="https://www.instagram.com/">
+              <img src="/LoginCadastro/images/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/">
+              <img src="/LoginCadastro/images/Facebook.png" alt="Facebook">
+            </a>
+            <div class="alternative">
+              <span>Ou</span>
+            </div>
+          </div>
+        </main>
+        <div class="textfield">
+          <label id="labelNome" for="nome">Nome</label>
+          <input type="text" id="nome" placeholder="Nome" required>
+        </div>
+        <div class="textfield">
+          <label for="Email">Email</label>
+          <input type="text" name="email" placeholder="Email">
+        </div>
+        <div id="msgError"></div>
+        <div class="textfield">
+          <label for="senha">Crie uma senha</label>
+          <input type="password" name="senha" placeholder="Senha">
+        </div>
+        <button class="bt-cadastro" onclick="cadastrar()">Cadastrar</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy;2023 Pippy Bank
+    <div class="footer-content">
+    </div>
+  </footer>
+
+  <script>
+    function cadastrar() {
+      alert("Cadastrado com sucesso!");
+
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

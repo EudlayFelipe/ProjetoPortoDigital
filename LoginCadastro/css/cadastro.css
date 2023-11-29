@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.left-cadastro > img {
+    width: 90%;
+    height: auto;
+}
+
+  .logo {
+    background-color: transparent;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-radius: 0px;
+}
+
+.logo img {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+}
+  
+body {
+    background: linear-gradient(250deg, #27174A, #161832, #101728);
+
+}
+
+ul {
+    font-size: 30px;
+    color: white;
+}
+
+.logo {
+    width: 4%;
+    height: auto;
+}
+
+
+
+.img-rodape img {
+    width: 100%;
+    height: auto;
+}
+
+.rodape {
+    text-align: justify;
+    max-width: 80px;
+    margin: 0 auto;
+}
+
+.lk-footer {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    color: white;
+    margin: 15px;
+}
+
+.links-rodape ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.links-rodape li {
+    margin-right: 8px; 
+    display: flex;
+}
+
+.links-rodape img {
+    height: 29.34px;
+    width: 19.25px;
+}
+
+li {
+    align-items: center;
+    text-align: center;
+}
+
+h1 ul {
+    font-size: 30px;
+    color: white;
+}
+
+.main-cadastro {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    background: linear-gradient(250deg, #27174A, #161832, #101728);
+}
+
+.left-cadastro,
+.right-cadastro {
+    width: 100%; 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-cadastro > h1 {
+    color: #000000;
+}
+
+.card-cadastro {
+    width: 90%; 
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px 25px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 10px 0px;
+}
+
+.textfield > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #ffffff;
+    color: #000000de;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textfield > label {
+    color: #000000de;
+    margin-bottom: 10px;
+}
+
+.textfield > input::placeholder {
+    color: #00000094;
+}
+
+.bt-cadastro {
+    width: 100%;
+    padding: 16px 0px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #746a6a;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+    box-shadow: 0px 10px 40px --12px #00ff8052;
+}
+
+main {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main h1 {
+    color: #8880FE;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+main.social-media {
+    display: flex;
+    align-content: center;
+}
+
+main .social-media a {
+    text-decoration: none;
+}
+
+main .social-media img {
+    width: 36px;
+    margin-left: 3rem;
+}
+
+main .social-media a:first-child img {
+    margin-left: 0;
+}
+
+main .alternative {
+    margin-top: 1rem;
+}
+
+main .alternative {
+    margin-top: 1rem;
+    text-align: center;
+    position: relative;
+    text-decoration-color: #000000;
+}
+
+main .alternative span {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+
+footer {
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+
+
+@media only screen and (max-width: 900px) {
+    section.images {
+        display: none;
+        visibility: hidden;
+    }
+
+    main {
+        width: 100vw;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .card-cadastro {
+      width: 80%;
+    }
+  
+    main h1 {
+      font-size: 2rem;
+    }
+  
+    main .alternative span {
+      font-size: 0.8rem;
+    }
+  
+    main form label span, main form input[type="submit"] {
+      font-size: 1rem;
+    }
+    @media (max-width: 768px) {
+        .logo img {
+          width: 25px;
+          height: 12.5px;
+        }
+    }
+}
