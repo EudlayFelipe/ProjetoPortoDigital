@@ -153,6 +153,10 @@ body {
     
 }
 
+#myMenu {
+    width: 0;
+}
+
 .navegacao ul{
     margin-left: 550px;
 }
@@ -345,6 +349,12 @@ a {
 
 @media screen and (max-width: 935px) {
 
+.menu {
+    width: 80%; 
+    height: 100%;
+    border-radius: 10px;
+}
+
 .principal {
     font-size: 15vw; 
 }
@@ -385,12 +395,5 @@ a {
 
 .navegacao {
     display: none;
-}
-
-
-.menu {
-    width: 80%; 
-    height: 100%;
-    border-radius: 10px;
 }
 }
