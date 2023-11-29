@@ -132,7 +132,31 @@
             <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                 <label for="newsletter1" class="visually-hidden">Sugestão</label>
                 <input id="newsletter1" type="text" class="form-control" placeholder="Sugestão">
-                <button class="btn btn-light" type="button">Enviar</button>
+                <button class="btn btn-light" type="button" onclick="enviarMensagem()">Enviar</button>
+
+                <script>
+                    function enviarMensagem() {
+                        var input = document.getElementById("newsletter1");
+                        var mensagem = input.value;
+                        
+                        
+                        localStorage.setItem("mensagemEnviada", mensagem);
+                        
+                        
+                        input.value = "";
+                        
+                        
+                        var sucesso = document.createElement("p");
+                        sucesso.textContent = "Enviado com sucesso!!";
+                        input.parentNode.appendChild(sucesso);
+                    }
+                    
+                    var mensagemSalva = localStorage.getItem("mensagemEnviada");
+                    if (mensagemSalva) {
+                        var input = document.getElementById("newsletter1");
+                        input.value = mensagemSalva;
+                    }
+                </script>
             </div>
             </form>
         </div>
