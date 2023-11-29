@@ -9,7 +9,11 @@
     <!-- Include Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Link do Icon Piggy Bank -->
     <link rel="icon" type="image/png" href="../LandingPage/logo oficial.png" />
+
+    <meta name="author" content="Jairo Williams, Caio Guilherme, Guilherme Facury, Sthephane Cardoso">
+    <meta name="description" content="Home work of Univeristy Tiradentes for Porto Digital">
     <title>Cobrança</title>
 </head>
 
@@ -17,7 +21,7 @@
 <body class="body container-fluid">
     <!-- Navbar -->
     <nav class="navbar navbar-dark navbar-expand-md" role="navigation">
-        <div class="container-fluid">
+        <div class="container-fluid ">
             <a class="navbar-brand" href="#"><img src="../LandingPage/logo oficial.png" alt="Logo" width="50"
                     height="50">
                 <h3 class="name-logo d-inline-block align-text-top">Piggy Bank</h3>
@@ -28,11 +32,10 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="../index.html"></a>
-                    <a class="nav-link" href="#">Features</a>
-                    <a class="nav-link" href="#">Pricing</a>
+            <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarNavAltMarkup">
+                <div class="navbar-nav d-flex justify-content-center align-items-center text-center gap-2">
+                    <a class="nav-link w-100" id="link-home" aria-current="page" href="../index.html">Home</a>
+                    <a class="nav-link active w-100" id="link-logout" href="#" >LogOut</a>
                 </div>
             </div>
         </div>
@@ -75,7 +78,6 @@
                             </div>
                         </div>
                     </div>
-
 
                     <!-- Card do Boleto -> Caso escolha Boleto -->
                     <div class="col-md-12" id="boleto_div" style="display:none;">
@@ -130,7 +132,8 @@
                                 </div>
 
                                 <div class="row d-flex justify-content-around align-items-center text-center">
-                                    <div class="col-md-6 col-sm-6" style="border-right: 1px solid rgba(128, 128, 128, 0.813);">
+                                    <div class="col-md-6 col-sm-6"
+                                        style="border-right: 1px solid rgba(128, 128, 128, 0.813);">
                                         <h4 class="text-cobranca text-secondary mb-2">Subtotal <span
                                                 id="value_subtotal"></span>
                                         </h4>
@@ -147,11 +150,11 @@
                                         </h3>
                                     </div>
                                 </div>
-                                
-                            </div>
-                                
 
-                            
+                            </div>
+
+
+
                         </div>
                     </div>
 
