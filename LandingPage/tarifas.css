@@ -1,0 +1,39 @@
+body{
+    background: linear-gradient(250deg, #27174A, #161832, #101728) !important;
+}
+
+.border-outline{
+    border: 1px solid rgb(65,37,131);
+    transition: all 0.5s;
+}
+
+.border-outline:hover{
+   color: white;
+    background: linear-gradient(to left, rgb(65,37,131), rgb(38,14,105));;
+    transition: all 0.5s;
+}
+
+.color-white{
+    color: #fff;
+}
+
+.color-white a{
+    color: #fff;
+}
+
+.btn-cadastro{
+    border-radius: 20pc;
+}
+
+.btn-cadastro:hover{
+    padding: 15px;
+    transition: all 0.3s;
+}
+
+.btn-link{
+    text-decoration: none;
+}
+
+.btn-link:hover{
+    color: #7529D6;
+}
