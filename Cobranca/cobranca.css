@@ -1,8 +1,8 @@
 /* Importando minha fonte */
 @import url('https://fonts.googleapis.com/css2 family=Poppins:wght@700&display=swap');
 
-* {
-    font-family: 'Poppins', sans-serif;
+* { 
+    font-family: 'Poppins', sans-serif !important;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,8 +14,33 @@
 }
 
 .text-cobranca{
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 18px !important; 
+    font-weight: 600 ;
 }
 
+.nav-link:hover{
+    cursor: pointer;
+    color: #fff !important;
+}
+
+#link-home{
+    transition: all 0.3s;
+}
+
+#link-home:hover{
+    transition: all 0.3s;
+    padding: 15px;
+}
+
+#link-logout{
+    border-radius: 20pc;
+    background: linear-gradient(to left, rgb(65,37,131), rgb(38,14,105));
+    transition: all 0.3s;
+}
+
+#link-logout:hover{
+    transition: all 0.3s;
+    padding: 15px;
+    color: white !important;
+}
 
