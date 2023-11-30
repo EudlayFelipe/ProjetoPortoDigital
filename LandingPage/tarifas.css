@@ -37,6 +37,9 @@ body{
 
 .btn-link:hover{
     color: #7529D6;
+}
+
+.btn-link a:hover {
     transform: scale(1.2);
 }
 
