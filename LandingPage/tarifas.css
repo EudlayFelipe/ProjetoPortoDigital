@@ -36,12 +36,7 @@ body{
 }
 
 .btn-link:hover{
-    color: #d62929;
-    transform: scale(2.5);
-}
-
-.btn-link a:hover {
-    transform: scale(2.5);
+    color: #7529D6;
 }
 
 .card-shiny{
