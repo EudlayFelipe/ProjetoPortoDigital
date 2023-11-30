@@ -61,11 +61,6 @@ body {
     color: #7529D6;
 }
 
-.quemSomos {
-    padding-top: 10px;
-    background: linear-gradient(16px, #27174A, #161832, #101728);
-    height: 100vh;
-}
 
 .foto{
     padding: 0;
@@ -75,11 +70,6 @@ body {
     margin-left: 40%;
     border-radius: 20px;
 }
-
-#myMenu {
-  width: 0;
-}
-
 .menu {
     position: fixed;
     right: 0;
@@ -91,6 +81,10 @@ body {
     transition: 0.5s;
     border-radius: 10px;
   }
+
+#myMenu {
+    width: 0;
+}
   
 .menu a {
     padding: 8px 8px 8px 32px;
@@ -204,7 +198,7 @@ a {
 
 .titlepage {    
     text-align: center;
-    padding-bottom: 60px;
+    padding-bottom: 100px;
     color: #ffffff;
 }
 
@@ -236,7 +230,7 @@ a {
 }
 
 .blu {
-    color: rgb(38,14,105)
+    color: #7529D6;
 }
 
 .d_flex {
@@ -272,6 +266,12 @@ a {
 
 .about .porco-top {
     float: right;
+    padding: 0;
+    height: 650px;
+    width: 650px;
+    margin-top: 1%;
+    margin-left: 50px;
+    border-radius: 10px;
 }
 
 .about .titlepage .read_more {
@@ -291,7 +291,7 @@ a {
 }
 
 .titlepage .roxo {
-    color: #260e69;
+    color: #7529D6;
 }
 
 #rodape {
@@ -303,7 +303,7 @@ a {
     background-color: rgb(24, 24, 24);
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1366px) {
     #myMenu {
         display: none;
     }
@@ -316,6 +316,20 @@ a {
 @media screen and (max-width: 935px) {
     .principal {
         font-size: 15vw; 
+    }
+    
+    .paragrafo {
+        font-size: 7vw;
+        padding-bottom: 15vw;
+    }
+
+    .porco-top {
+        max-width: 100vw;
+        height: auto; 
+        display: flex;
+        justify-content: flex-end;
+        text-align: right;
+        
     }
 
     .quemSomos {
