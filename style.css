@@ -55,6 +55,7 @@ html {
 body {
     background-attachment: fixed;
     background: linear-gradient(250deg, #27174A, #161832, #101728);
+    
 }
 
 .principal {    
@@ -132,7 +133,7 @@ body {
     margin-top: 20px;
     margin-right: 20px;
     border: 0;
-    font-size:30px;
+    font-size:30px
 }
 
 .header {
@@ -154,7 +155,6 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    
 }
 
 .navegacao ul{
@@ -328,6 +328,77 @@ a {
     color: #260e69;
 }
 
+#rodape {
+    background-color: rgb(24, 24, 24);
+    color: white;
+}
+
+.fooder {
+    background-color: rgb(24, 24, 24);
+}
+
+@media screen and (min-width: 1025px) {
+    #myMenu {
+        display: none;
+    }
+
+    .icone {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 935px) {
+
+.principal {
+    font-size: 15vw; 
+}
+
+.quemSomos {
+    padding-top: 5vw;
+}
+
+.main-content {
+    display: block;
+    text-align: center;
+}
+
+.foto {
+    display: block;
+    margin: 10% auto 0; 
+    max-width: 80%; 
+    height: auto; 
+    border-radius: 10px;
+}
+
+.container-fluid {
+    margin-top: 0;
+}
+
+.about .titlepage h2 {
+    font-size: 8vw;
+    margin-bottom: 5px;
+}
+
+
+.about .titlepage p {
+    font-size: 3vw;
+    line-height: 6vw;
+    font-weight: 0;
+    padding-bottom: 0px;
+}
+
+.navegacao {
+    display: none;
+}
+
+
+.menu {
+    width: 80%; 
+    height: 100%;
+    border-radius: 10px;
+}
+}
+
 #row {
     padding-top: 50px;
 }
@@ -412,14 +483,6 @@ a {
     padding-top: 9.9%;
 }
 
-#rodape {
-    background-color: rgb(24, 24, 24);
-    color: white;
-}
-
-.fooder {
-    background-color: rgb(24, 24, 24);
-}
 .navbar {
     background: linear-gradient(250deg, #27174A, #161832, #101728);
     overflow: hidden;
@@ -496,65 +559,4 @@ nav img {
 
 .acesso:hover {
     transform: scale(1.2);
-}
-
-
-@media screen and (min-width: 1025px) {
-    #myMenu {
-        display: none;
-    }
-
-    .icone {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 935px) {
-    .principal {
-        font-size: 15vw; 
-    }
-
-    .quemSomos {
-        padding-top: 5vw;
-    }
-
-    .main-content {
-        display: block;
-        text-align: center;
-    }
-
-    .foto {
-        display: block;
-        margin: 10% auto 0; 
-        max-width: 80%; 
-        height: auto; 
-        border-radius: 10px;
-    }
-
-    .container-fluid {
-        margin-top: 0;
-    }
-
-    .about .titlepage h2 {
-        font-size: 8vw;
-        margin-bottom: 5px;
-    }
-
-
-    .about .titlepage p {
-        font-size: 3vw;
-        line-height: 6vw;
-        font-weight: 0;
-        padding-bottom: 0px;
-    }
-
-    .navegacao {
-        display: none;
-    }
-
-    .menu {
-        width: 80%; 
-        height: 100%;
-        border-radius: 10px;
-    }
 }
