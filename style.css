@@ -356,15 +356,14 @@ a {
 }
 
 .carousel-containe {
-    width: 100%; 
+    width: 95%;
     margin: auto;
     overflow: hidden;
     position: static;
-    border: none; 
+    border: 10px solid x#000000 !important;
     border-radius: 10px;
-    z-index: 1; 
+    z-index: -999;
 }
-
 
 .carousel-wrappe {
     display: flex;
