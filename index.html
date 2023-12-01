@@ -21,17 +21,15 @@
 </head>
 
 <body>
-
     <header class="header">
-        <img src="./LandingPage/logo oficial.png" alt="Ícone">
-        <h3>Piggy Bank</h3>
+        <img src="./LandingPage/logo oficial.png" alt="Ícone" href="#">
+        <h3>Piggy Bank</h3>    
         <div id="myMenu" class="menu">
-            <a class="item-login" href="./LoginCadastro/assets/html/login.html">Login</a>
             <a class="item-cadastre" href="#">Clientes</a>
-            <a class="item-cadastre" href="#">Sobre Nós</a>
+            <a class="item-cadastre" href="./SobreNos/index.html">Sobre Nós</a>
             <a class="item-cadastre" href="#quemSomos">Quem Somos</a>
-            <a class="item-cadastre" href="#">Tarifas</a>
-            <a href="#">Acesso ao Sistema</a>
+            <a class="item-cadastre" href="/ProjetoPortoDigital/LandingPage/tarifas.html">Tarifas</a>
+            <a href="/ProjetoPortoDigital/LoginCadastro/html/login.html">Acesso ao Sistema</a>
         </div>
         <button class="icone" style="position:fixed; right:0; top:0" onclick="toggleMenu()">☰</button>
     </header>
@@ -39,25 +37,23 @@
     <header class="navegacao">
         <nav>
             <ul class="barraNav">
-                <li><a href="#">Login</a></li>
                 <li><a href="#">Clientes</a></li>
-                <li><a href="#">Sobre Nós</a></li>
-                <li><a href="#quemSomos">Quem Somos</a></li>
-                <li><a href="#">Tarifas</a></li>
+                <li><a href="./SobreNos/index.html">Sobre Nós</a></li>
+                <li><a href="#quemSomos">Quem Somos</a></li>            
+                <li><a href="/ProjetoPortoDigital/LandingPage/tarifas.html">Tarifas</a></li>            
             </ul>
         </nav>
-
-        <button><a href="#">Acesso ao Sistema</a></button>
+        <button><a href="/ProjetoPortoDigital/LoginCadastro/html/login.html">Acesso ao Sistema</a></button>
     </header>
 
     <main>
-        <section class="container home">
+        <section class="container home" >
             <div>
                 <div class="main-content mt-5">
                     <h1 class="principal">
                         Sempre Conectado
                         <br>
-                        <a href="#"><button class="gradiente-botão">Saiba mais</button></a>
+                        <a href="/ProjetoPortoDigital/SobreNos/index.html"><button class="gradiente-botão">Saiba mais</button></a>
                     </h1>
                     <img class="foto" src="./LandingPage/fotoPrincipal.png" alt="foto">
                 </div>
@@ -139,70 +135,85 @@
     <footer class="py-5 fooder">
         <div class="container" id="rodape">
             <div class="row">
-                <div class="col-6 col-md-2 mb-3">
-                    <h5>Secção</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Home</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Quem Somos</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Cobrança</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Tarifas</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Sobre Nós</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-6 col-md-2 mb-3">
-                    <h5>&nbsp;</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2">&nbsp;</li>
-                        <li class="nav-item mb-2">&nbsp;</li>
-                        <li class="nav-item mb-2">&nbsp;</li>
-                        <li class="nav-item mb-2">&nbsp;</li>
-                        <li class="nav-item mb-2">&nbsp;</li>
-                    </ul>
-                </div>
-
-                <div class="col-6 col-md-2 mb-3">
-                    <h5>&nbsp;</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2">&nbsp;</li>
-                        <li class="nav-item mb-2">&nbsp;</li>
-                        <li class="nav-item mb-2">&nbsp;</li>
-                        <li class="nav-item mb-2">&nbsp;</li>
-                        <li class="nav-item mb-2">&nbsp;</li>
-                    </ul>
-                </div>
-
-                <div class="col-md-5 offset-md-1 mb-3">
-                    <form>
-                        <h5>Envie sugestões</h5>
-                        <p>Estamos sempre dispostos a melhorar.</p>
-                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                            <label for="newsletter1" class="visually-hidden">Sugestão</label>
-                            <input id="newsletter1" type="text" class="form-control" placeholder="Sugestão">
-                            <button class="btn btn-light" type="button">Enviar</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-                <p>© 2023 Company, Inc. All rights reserved.</p>
-                <ul class="list-unstyled d-flex">
-                    <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24">
-                                <use xlink:href="#twitter"></use>
-                            </svg></a></li>
-                    <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24">
-                                <use xlink:href="#instagram"></use>
-                            </svg></a></li>
-                    <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24">
-                                <use xlink:href="#facebook"></use>
-                            </svg></a></li>
+            <div class="col-6 col-md-2 mb-3">
+                <h5>Secção</h5>
+                <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Home</a></li>
+                <li class="nav-item mb-2"><a href="#quemSomos" class="nav-link p-0 text-light">Quem Somos</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Tarifas</a></li>
+                <li class="nav-item mb-2"><a href="./SobreNos/index.html" class="nav-link p-0 text-light">Sobre Nós</a></li>
                 </ul>
+            </div>
+    
+            <div class="col-6 col-md-2 mb-3">
+                <h5>&nbsp;</h5>
+                <ul class="nav flex-column">
+                <li class="nav-item mb-2">&nbsp;</li>
+                <li class="nav-item mb-2">&nbsp;</li>
+                <li class="nav-item mb-2">&nbsp;</li>
+                <li class="nav-item mb-2">&nbsp;</li>
+                <li class="nav-item mb-2">&nbsp;</li>
+                </ul>
+            </div>
+    
+            <div class="col-6 col-md-2 mb-3">
+                <h5>&nbsp;</h5>
+                <ul class="nav flex-column">
+                <li class="nav-item mb-2">&nbsp;</li>
+                <li class="nav-item mb-2">&nbsp;</li>
+                <li class="nav-item mb-2">&nbsp;</li>
+                <li class="nav-item mb-2">&nbsp;</li>
+                <li class="nav-item mb-2">&nbsp;</li>
+                </ul>
+            </div>
+    
+            <div class="col-md-5 offset-md-1 mb-3">
+                <form>
+                <h5>Envie sugestões</h5>
+                <p>Estamos sempre dispostos a melhorar.</p>
+                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                    <label for="newsletter1" class="visually-hidden">Sugestão</label>
+                    <input id="newsletter1" type="text" class="form-control" placeholder="Sugestão">
+                    <button class="btn btn-light" type="button" onclick="enviarMensagem()">Enviar</button>
+    
+                    <script>
+                        function enviarMensagem() {
+                            var input = document.getElementById("newsletter1");
+                            var mensagem = input.value;
+                            
+                            
+                            localStorage.setItem("mensagemEnviada", mensagem);
+                            
+                            
+                            input.value = "";
+                            
+                            
+                            var sucesso = document.createElement("p");
+                            sucesso.textContent = "Enviado com sucesso!!";
+                            input.parentNode.appendChild(sucesso);
+                        }
+                        
+                        var mensagemSalva = localStorage.getItem("mensagemEnviada");
+                        if (mensagemSalva) {
+                            var input = document.getElementById("newsletter1");
+                            input.value = mensagemSalva;
+                        }
+                    </script>
+                </div>
+                </form>
+            </div>
+            </div>
+    
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+            <p>© 2023 Company, Inc. All rights reserved.</p>
+            <ul class="list-unstyled d-flex">
+                <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+                <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+                <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+            </ul>
             </div>
         </div>
     </footer>
-
-
 
     <script>
         function toggleMenu() {
@@ -213,7 +224,7 @@
                 menu.style.width = "250px";
             }
         }
-    </script>
+    </script>             
 
     <script src="./script.js"></script>
 </body>

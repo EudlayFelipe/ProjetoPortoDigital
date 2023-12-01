@@ -85,6 +85,11 @@ body {
     margin-left: 40%;
     border-radius: 20px;
 }
+
+#myMenu {
+    width: 0;
+}
+
 .menu {
     position: fixed;
     right: 0;
