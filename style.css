@@ -416,7 +416,8 @@ a {
 
 .tit-clientes:hover {
     color: rgb(255, 251, 126);
-}   
+}  
+
 .nome {
     color: #7529D6;   
 }
@@ -427,7 +428,7 @@ a {
 }
 
 .carousel-containe {
-    width: 95%;
+    width: 90%;
     margin: auto;
     overflow: hidden;
     position: static;
@@ -464,7 +465,7 @@ a {
     background: linear-gradient(450deg, rgb(40, 24, 80), rgb(38, 14, 106));
     width: 100%;
     border-radius: 10px;
-    padding: 15px;
+    padding: 13px;
 }
 
 .TextoDeSatisfacao p1 {
@@ -477,8 +478,8 @@ a {
 
 .img-fundo {
     position: fixed;
-    margin-left: 6%;
-    width: 550px;
+    margin-left: 4%;
+    width: 540px;
     height: 330px;
     padding-top: 9.9%;
 }
