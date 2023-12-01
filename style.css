@@ -330,7 +330,8 @@ a {
 
 #row {
     padding-top: 50px;
-    max-width: 1318px;
+    width: 100vw;
+    max-width: 100vw;
 }
 
 .tit-clientes {
