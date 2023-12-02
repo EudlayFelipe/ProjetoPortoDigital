@@ -40,10 +40,21 @@ ul {
 }
 
 .logo {
-    width: 4%;
+    background-color: transparent;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-radius: 0px;
+  }
+  
+  .logo img {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 5%;
     height: auto;
-}
-
+  }
 
 
 .img-rodape img {
@@ -270,10 +281,11 @@ footer {
     main form label span, main form input[type="submit"] {
       font-size: 1rem;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 1000px) {
         .logo img {
-          width: 25px;
-          height: 12.5px;
+          width: 80px;
+          height: auto;
+          image-rendering: crisp-edges;
         }
+      }
     }
-}

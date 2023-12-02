@@ -6,61 +6,58 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .left-login > img {
-    width: 90%; 
+    width: 90%;
     height: auto;
-  }
-  .logo {
-    background-color: transparent;
-    padding: 0px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    border-radius: 0px;
+}
+
+
+.logo {
+  background-color: transparent;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border-radius: 0px;
 }
 
 .logo img {
-    position: fixed;
-    top: 10px;
-    right: 20px;
-    width: 80px;
-    height: 80px;
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
 }
-
-
+  
 body {
     background: linear-gradient(250deg, #27174A, #161832, #101728);
-    min-height: 100%;
+
 }
 
-ul{
+ul {
     font-size: 30px;
     color: white;
 }
+
 .logo {
-    width: 4%;
-    height: auto;
+  background-color: transparent;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border-radius: 0px;
 }
 
-footer {
-    background-color: transparent;
-    color: white;
-    text-align: center;
-    padding: 0px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    margin-top: auto;
-    
-
+.logo img {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 5%;
+  height: auto;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-}
 
 .img-rodape img {
     width: 100%;
@@ -71,7 +68,6 @@ footer {
     text-align: justify;
     max-width: 80px;
     margin: 0 auto;
-
 }
 
 .lk-footer {
@@ -113,10 +109,11 @@ h1 ul {
 .main-login {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(250deg, #27174A, #161832, #101728);
     display: flex;
     justify-content: center;
     align-items: center;
+    background-attachment: fixed;
+    background: linear-gradient(250deg, #27174A, #161832, #101728);
 }
 
 .left-login,
@@ -134,8 +131,8 @@ h1 ul {
 }
 
 .card-login {
-    width: 300%; 
-    max-width: 400px;
+    width: 90%; 
+    max-width: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -144,6 +141,13 @@ h1 ul {
     background-color: #ffffff;
     border-radius: 20px;
     box-shadow: 0px 10px 40px #00000056;
+    h1 {
+      font-size: 30px;
+    }
+  
+    input {
+      font-size: 20px;
+    }
 }
 
 .textfield {
@@ -153,6 +157,7 @@ h1 ul {
     justify-content: center;
     align-items: flex-start;
     margin: 10px 0px;
+    font-size: 18pt;
 }
 
 .textfield > input {
@@ -162,7 +167,7 @@ h1 ul {
     padding: 15px;
     background-color: #ffffff;
     color: #000000de;
-    font-size: 12pt;
+    font-size: 14pt;
     box-shadow: 0px 10px 40px #00000056;
     outline: none;
     box-sizing: border-box;
@@ -180,7 +185,7 @@ h1 ul {
 .bt-login {
     width: 100%;
     padding: 16px 0px;
-    margin: 25px;
+    margin: 10px;
     border: none;
     border-radius: 8px;
     outline: none;
@@ -193,16 +198,100 @@ h1 ul {
     box-shadow: 0px 10px 40px --12px #00ff8052;
 }
 
-
-@media screen and (max-width: 768px) {
-    .card-login {
-        width: 90%;
-    }
+main {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-@media (max-width: 768px) {
+
+main h1 {
+    color: #8880FE;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+main.social-media {
+    display: flex;
+    align-content: center;
+}
+
+main .social-media a {
+    text-decoration: none;
+}
+
+main .social-media img {
+    width: 36px;
+    margin-left: 3rem;
+}
+
+main .social-media a:first-child img {
+    margin-left: 0;
+}
+
+main .alternative {
+    margin-top: 1rem;
+}
+
+main .alternative {
+    margin-top: 1rem;
+    text-align: center;
+    position: relative;
+    text-decoration-color: #000000;
+}
+
+main .alternative span {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+
+footer {
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+
+@media only screen and (max-width: 900px) {
+  .main {
+    width: 100vw;
+  }
+  .card-login {
+    width: 100%;
+    max-width: 500px;
+  }
+  main h1 {
+    font-size: 2rem;
+  }
+  main .alternative span {
+    font-size: 0.8rem;
+  }
+  main form label span, main form input[type="submit"] {
+    font-size: 1rem;
+  }
+  @media (max-width: 1000px) {
     .logo img {
-      width: 25px;
-      height: 12.5px;
+      width: 80px;
+      height: auto;
+      image-rendering: crisp-edges;
     }
   }
-  
+}
+
+@media only screen and (max-width: 900px) {
+  .left-login {
+    display: none;
+  }
+}
