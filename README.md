@@ -35,7 +35,7 @@ Abra o arquivo index.html em um navegador web para visualizar o site localmente.
 
 <p>Stephany De Santana Cardoso: Página de Cobrança</p>
 
-<p>Levi Dórea Mota: Página Principal</p>
+<p>Levi Dórea Mota (https://github.com/levimotaa): Página Principal</p>
 
 <p>Eudlay Felipe Gonzaga Santos (https://github.com/EudlayFelipe): Página Principal</p>
 
