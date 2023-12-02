@@ -25,19 +25,19 @@
 Abra o arquivo index.html em um navegador web para visualizar o site localmente.
 
 <h2>Autores:</h2>
-<P>Jonathan Santos Aragão: Sobre Nós</P>
+<P>Jonathan Santos Aragão (https://github.com/JonathanSAaa): Página Sobre Nós</P>
 
-<p>Paula Barroso Santos: Login /Cadastro</p>
+<p>Paula Barroso Santos (https://github.com/PaulaBarroso2): Página Login/Cadastro</p>
 
-<p>Jairo Williams Guedes Lopes Neto: Página de Cobrança</p>
+<p>Jairo Williams Guedes Lopes Neto (https://github.com/JairoNetoDev): Página de Cobrança/Tarifa</p>
 
-<p>Caio Guilherme Sampaio Xavier: Página de Cobrança</p>
+<p>Caio Guilherme Sampaio Xavier (https://github.com/K-Yooo): Página de Cobrança</p>
 
 <p>Stephany De Santana Cardoso: Página de Cobrança</p>
 
 <p>Levi Dórea Mota: Página Principal</p>
 
-<p>Eudlay Felipe Gonzaga Santos: Landing Page</p>
+<p>Eudlay Felipe Gonzaga Santos (https://github.com/EudlayFelipe): Página Principal</p>
 
 <p>Guilherme Viana Facury: Página de Cobrança</p>
 <hr>
