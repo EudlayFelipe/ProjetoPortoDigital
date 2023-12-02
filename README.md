@@ -18,14 +18,32 @@
 <p> Stylesheet: &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"&gt;</p>
 <p> Script: <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script></p>
 
-Certifique-se de que **todos os arquivos** CSS e JS estão corretamente referenciados no arquivo referente às suas respectivas páginas HTML.
+<p>Certifique-se de que **todos os arquivos** CSS e JS estão corretamente referenciados no arquivo referente às suas respectivas páginas HTML.</p>
 
 <h2>Uso:</h2>
 <h3>Execução Local:</h3>
 Abra o arquivo index.html em um navegador web para visualizar o site localmente.
+
+<h2>Autores:</h2>
+<P>Jonathan Santos Aragão: Sobre Nós</P>
+
+<p>Paula Barroso Santos: Login /Cadastro</p>
+
+<p>Jairo Williams Guedes Lopes Neto: Página de Cobrança</p>
+
+<p>Caio Guilherme Sampaio Xavier: Página de Cobrança</p>
+
+<p>Stephany De Santana Cardoso: Página de Cobrança</p>
+
+<p>Levi Dórea Mota: Página Principal</p>
+
+<p>Eudlay Felipe Gonzaga Santos: Landing Page</p>
+
+<p>Guilherme Viana Facury: Página de Cobrança</p>
 <hr>
+
 <h1>Notas Adicionais sobre as páginas do Projeto:</h2>
-<h2>Landing Page:</h2>
+<h2>Landing Page/index:</h2>
 <p>Utilize a landing page para navegar e descobrir mais sobre a nossa empresa. Nela possui uma barra de navegação para navegar pelo nosso site. Utilize-a para descobrir sobre quem somos e como nossos clientes estão satisfeitos com a nossa empresa, descubra as tarifas que oferecemos para cada tipo de cobrança e o acesso ao nosso sistema.</p>
 
 <h2>Tarifas:</h2>
