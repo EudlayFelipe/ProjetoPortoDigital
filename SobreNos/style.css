@@ -290,6 +290,11 @@ a {
     color: #7529D6;
 }
 
+
+#myMenu {
+    width: 0;
+}
+
 #rodape {
     background-color: rgb(24, 24, 24);
     color: white;
