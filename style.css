@@ -71,6 +71,11 @@ body {
     height: 100vh;
 }
 
+#title-logo{
+    text-decoration: none;
+    color: #fff;
+}
+
 .quemSomos {
     padding-top: 10px;
     background: linear-gradient(16px, #27174A, #161832, #101728);
