@@ -70,6 +70,12 @@ body {
     margin-left: 40%;
     border-radius: 20px;
 }
+
+#title-logo{
+    text-decoration: none;
+    color: #fff;
+}
+
 .menu {
     position: fixed;
     right: 0;
